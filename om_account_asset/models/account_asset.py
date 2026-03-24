@@ -22,19 +22,19 @@ class AccountAssetCategory(models.Model):
     account_asset_id = fields.Many2one(
         'account.account', string='Asset Account',
         required=True,
-        domain=[('account_type', 'not in', exclude_types)],
+        domain=[('account_type', 'not in', exclude_types), ('deprecated', '=', False)],
         help="Account used to record the purchase of the asset at its original price."
     )
     account_depreciation_id = fields.Many2one(
         'account.account', string='Depreciation Entries: Asset Account',
         required=True,
-        domain=[('account_type', 'not in', exclude_types)],
+        domain=[('account_type', 'not in', exclude_types), ('deprecated', '=', False)],
         help="Account used in the depreciation entries, to decrease the asset value."
     )
     account_depreciation_expense_id = fields.Many2one(
         'account.account', string='Depreciation Entries: Expense Account',
         required=True,
-        domain=[('account_type', 'not in', exclude_types)],
+        domain=[('account_type', 'not in', exclude_types), ('deprecated', '=', False)],
         help="Account used in the periodical entries "
              "to record a part of the asset as expense."
     )

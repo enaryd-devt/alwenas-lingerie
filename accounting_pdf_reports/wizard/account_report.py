@@ -9,8 +9,8 @@ class AccountingReport(models.TransientModel):
     @api.model
     def _get_account_report(self):
         reports = []
-        if self.env.context.get('active_id'):
-            menu = self.env['ir.ui.menu'].browse(self.env.context.get('active_id')).name
+        if self._context.get('active_id'):
+            menu = self.env['ir.ui.menu'].browse(self._context.get('active_id')).name
             reports = self.env['account.financial.report'].search([('name', 'ilike', menu)])
         return reports and reports[0] or False
 

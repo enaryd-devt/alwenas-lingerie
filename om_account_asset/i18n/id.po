@@ -4,139 +4,135 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0-20250218\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-14 15:02+0000\n"
-"PO-Revision-Date: 2025-03-14 15:02+0000\n"
+"POT-Creation-Date: 2024-11-10 07:47+0000\n"
+"PO-Revision-Date: 2024-11-10 15:49+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid " (copy)"
-msgstr " (copie)"
+msgstr "(menyalin)"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid " (grouped)"
-msgstr " (groupé)"
+msgstr "(dikelompokkan)"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__entry_count
 msgid "# Asset Entries"
-msgstr "Nombre d'écritures d'actifs"
+msgstr "# Entri Aset"
 
 #. module: om_account_asset
 #: model:ir.actions.server,name:om_account_asset.account_asset_cron_ir_actions_server
 msgid "Account Asset: Generate asset entries"
-msgstr "Compte d'actif : Générer les écritures d'actifs"
+msgstr "Aset Akun: Hasilkan entri aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_depreciation_confirmation_wizard__date
 msgid "Account Date"
-msgstr "Date comptable"
+msgstr "Tanggal Akun"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__account_depreciation_id
 msgid "Account used in the depreciation entries, to decrease the asset value."
-msgstr "Compte utilisé dans les écritures d'amortissement, pour réduire la valeur de l'actif."
+msgstr "Akun yang digunakan dalam entri penyusutan, untuk menurunkan nilai aset."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__account_depreciation_expense_id
-msgid ""
-"Account used in the periodical entries to record a part of the asset as "
-"expense."
-msgstr ""
-"Compte utilisé dans les écritures périodiques pour enregistrer une partie de "
-"l'actif comme une dépense."
+msgid "Account used in the periodical entries to record a part of the asset as expense."
+msgstr "Akun yang digunakan dalam entri berkala untuk mencatat sebagian aset sebagai beban."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__account_asset_id
-msgid ""
-"Account used to record the purchase of the asset at its original price."
-msgstr ""
-"Compte utilisé pour enregistrer l'achat de l'actif à son prix d'origine."
+msgid "Account used to record the purchase of the asset at its original price."
+msgstr "Akun yang digunakan untuk mencatat pembelian aset pada harga aslinya."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_needaction
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_needaction
 msgid "Action Needed"
-msgstr "Action requise"
+msgstr "Dibutuhkan Tindakan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__active
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__active
 msgid "Active"
-msgstr "Actif"
+msgstr "Aktif"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_ids
 msgid "Activities"
-msgstr "Activités"
+msgstr "Kegiatan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_exception_decoration
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Décoration d'exception d'activité"
+msgstr "Dekorasi Pengecualian Aktivitas"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_state
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_state
 msgid "Activity State"
-msgstr "État de l'activité"
+msgstr "Status Aktivitas"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_type_icon
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_type_icon
 msgid "Activity Type Icon"
-msgstr "Icône du type d'activité"
+msgstr "Ikon Jenis Aktivitas"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Additional Options"
-msgstr "Options supplémentaires"
+msgstr "Opsi Tambahan"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "Amount"
-msgstr "Montant"
+msgstr "Jumlah"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__depreciation_value
 msgid "Amount of Depreciation Lines"
-msgstr "Montant des lignes d'amortissement"
+msgstr "Jumlah Garis Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__installment_value
 msgid "Amount of Installment Lines"
-msgstr "Montant des lignes d'échéances"
+msgstr "Jumlah Baris Angsuran"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__account_analytic_id
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__account_analytic_id
 msgid "Analytic Account"
-msgstr "Compte analytique"
+msgstr "Akun Analitik"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__analytic_distribution
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__analytic_distribution
 msgid "Analytic Distribution"
-msgstr "Distribution analytique"
+msgstr "Distribusi Analitik"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__analytic_precision
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__analytic_precision
 msgid "Analytic Precision"
-msgstr "Précision analytique"
+msgstr "Presisi Analitik"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__asset_id
@@ -145,13 +141,13 @@ msgstr "Précision analytique"
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Asset"
-msgstr "Actif"
+msgstr "Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__account_asset_id
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 msgid "Asset Account"
-msgstr "Compte d'actif"
+msgstr "Akun Aset"
 
 #. module: om_account_asset
 #: model:ir.actions.act_window,name:om_account_asset.action_account_asset_asset_list_normal_purchase
@@ -163,32 +159,32 @@ msgstr "Compte d'actif"
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_invoice_asset_category
 msgid "Asset Category"
-msgstr "Catégorie d'actif"
+msgstr "Kategori Aset"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.asset_modify_form
 msgid "Asset Durations to Modify"
-msgstr "Durées d'actif à modifier"
+msgstr "Durasi Aset untuk Dimodifikasi"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_move_line__asset_end_date
 msgid "Asset End Date"
-msgstr "Date de fin de l'actif"
+msgstr "Tanggal Berakhirnya Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__asset_method_time
 msgid "Asset Method Time"
-msgstr "Méthode temporelle de l'actif"
+msgstr "Waktu Metode Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__name
 msgid "Asset Name"
-msgstr "Nom de l'actif"
+msgstr "Nama Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_move_line__asset_start_date
 msgid "Asset Start Date"
-msgstr "Date de début de l'actif"
+msgstr "Tanggal Mulai Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__name
@@ -196,7 +192,7 @@ msgstr "Date de début de l'actif"
 #: model:ir.model.fields,field_description:om_account_asset.field_product_template__asset_category_id
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Asset Type"
-msgstr "Type d'actif"
+msgstr "Jenis Aset"
 
 #. module: om_account_asset
 #: model:ir.model,name:om_account_asset.model_account_asset_category
@@ -204,125 +200,117 @@ msgstr "Type d'actif"
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_tree
 msgid "Asset category"
-msgstr "Catégorie d'actif"
+msgstr "Kategori aset"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "Asset created"
-msgstr "Actif créé"
+msgstr "Aset dibuat"
 
 #. module: om_account_asset
 #: model:ir.model,name:om_account_asset.model_account_asset_depreciation_line
 msgid "Asset depreciation line"
-msgstr "Ligne d'amortissement de l'actif"
+msgstr "Baris depresiasi aset"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "Asset sold or disposed. Accounting entry awaiting for validation."
-msgstr "Actif vendu ou cédé. Écriture comptable en attente de validation."
+msgstr "Aset dijual atau dibuang. Entri akuntansi menunggu validasi."
 
 #. module: om_account_asset
 #: model:ir.model,name:om_account_asset.model_account_asset_asset
 msgid "Asset/Revenue Recognition"
-msgstr "Reconnaissance des actifs/revenus"
+msgstr "Pengakuan Aset/Pendapatan"
 
 #. module: om_account_asset
 #: model:ir.actions.act_window,name:om_account_asset.action_account_asset_asset_form
 #: model:ir.model.fields,field_description:om_account_asset.field_account_bank_statement_line__asset_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_move__asset_ids
-#: model:ir.ui.menu,name:om_account_asset.menu_action_account_asset_asset_form
-#: model:ir.ui.menu,name:om_account_asset.menu_action_asset_asset_report
+#: model:ir.ui.menu,name:om_account_asset.menu_action_account_asset_asset_form model:ir.ui.menu,name:om_account_asset.menu_action_asset_asset_report
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_purchase_tree
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 msgid "Assets"
-msgstr "Actifs"
+msgstr "Aset"
 
 #. module: om_account_asset
-#: model:ir.actions.act_window,name:om_account_asset.action_asset_asset_report
-#: model:ir.model,name:om_account_asset.model_asset_asset_report
+#: model:ir.actions.act_window,name:om_account_asset.action_asset_asset_report model:ir.model,name:om_account_asset.model_asset_asset_report
 #: model_terms:ir.ui.view,arch_db:om_account_asset.action_account_asset_report_graph
 #: model_terms:ir.ui.view,arch_db:om_account_asset.action_account_asset_report_pivot
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Assets Analysis"
-msgstr "Analyse des actifs"
+msgstr "Analisis Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_bank_statement_line__asset_depreciation_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_move__asset_depreciation_ids
 msgid "Assets Depreciation Lines"
-msgstr "Lignes d'amortissement des actifs"
+msgstr "Baris Penyusutan Aset"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 msgid "Assets in closed state"
-msgstr "Actifs en état fermé"
+msgstr "Aset dalam keadaan tertutup"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 msgid "Assets in draft and open states"
-msgstr "Actifs en état brouillon et ouvert"
+msgstr "Aset dalam keadaan draft dan terbuka"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Assets in draft state"
-msgstr "Actifs en état brouillon"
+msgstr "Aset dalam keadaan draft"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Assets in running state"
-msgstr "Actifs en état en cours"
+msgstr "Aset dalam keadaan berjalan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_attachment_count
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_attachment_count
 msgid "Attachment Count"
-msgstr "Nombre de pièces jointes"
+msgstr "Jumlah Lampiran"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__open_asset
 msgid "Auto-Confirm Assets"
-msgstr "Confirmer automatiquement les actifs"
+msgstr "Konfirmasi Otomatis Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__date_first_depreciation__last_day_period
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__date_first_depreciation__last_day_period
 msgid "Based on Last Day of Purchase Period"
-msgstr "Basé sur le dernier jour de la période d'achat"
+msgstr "Berdasarkan Hari Terakhir Periode Pembelian"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.asset_modify_form
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_depreciation_confirmation_wizard
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Membatalkan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__category_id
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 msgid "Category"
-msgstr "Catégorie"
+msgstr "Kategori"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Category of asset"
-msgstr "Catégorie de l'actif"
+msgstr "Kategori aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__open_asset
-msgid ""
-"Check this if you want to automatically confirm the assets of this category "
-"when created by invoices."
-msgstr ""
-"Cochez cette case si vous souhaitez confirmer automatiquement les actifs de "
-"cette catégorie lorsqu'ils sont créés par des factures."
+msgid "Check this if you want to automatically confirm the assets of this category when created by invoices."
+msgstr "Centang ini jika Anda ingin mengonfirmasi aset kategori ini secara otomatis saat faktur dibuat."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__group_entries
 msgid "Check this if you want to group the generated entries by categories."
-msgstr ""
-"Cochez cette case si vous souhaitez regrouper les écritures générées par "
-"catégories."
+msgstr "Centang ini jika Anda ingin mengelompokkan entri yang dihasilkan berdasarkan kategori."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__method
@@ -332,10 +320,9 @@ msgid ""
 "  * Linear: Calculated on basis of: Gross Value / Number of Depreciations\n"
 "  * Degressive: Calculated on basis of: Residual Value * Degressive Factor"
 msgstr ""
-"Choisissez la méthode à utiliser pour calculer le montant des lignes "
-"d'amortissement.\n"
-"  * Linéaire : Calculé sur la base de : Valeur brute / Nombre d'amortissements\n"
-"  * Dégressif : Calculé sur la base de : Valeur résiduelle * Facteur dégressif"
+"Pilih metode yang akan digunakan untuk menghitung jumlah baris penyusutan.\n"
+"  * Linier : Dihitung berdasarkan : Nilai Bruto / Jumlah Penyusutan\n"
+"  * Degresif: Dihitung berdasarkan: Nilai Sisa * Faktor Degresif"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__method_time
@@ -345,30 +332,25 @@ msgid ""
 "  * Number of Entries: Fix the number of entries and the time between 2 depreciations.\n"
 "  * Ending Date: Choose the time between 2 depreciations and the date the depreciations won't go beyond."
 msgstr ""
-"Choisissez la méthode à utiliser pour calculer les dates et le nombre "
-"d'écritures.\n"
-"  * Nombre d'écritures : Fixez le nombre d'écritures et le temps entre 2 amortissements.\n"
-"  * Date de fin : Choisissez le temps entre 2 amortissements et la date au-delà de laquelle les amortissements ne s'étendent pas."
+"Pilih metode yang akan digunakan untuk menghitung tanggal dan jumlah entri.\n"
+"  * Jumlah Entri: Perbaiki jumlah entri dan waktu antara 2 penyusutan.\n"
+"  * Tanggal Berakhir: Pilih waktu antara 2 penyusutan dan tanggal tidak akan berakhirnya penyusutan."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_asset_depreciation_confirmation_wizard__date
-msgid ""
-"Choose the period for which you want to automatically post the depreciation "
-"lines of running assets"
-msgstr ""
-"Choisissez la période pour laquelle vous souhaitez comptabiliser automatiquement "
-"les lignes d'amortissement des actifs en cours"
+msgid "Choose the period for which you want to automatically post the depreciation lines of running assets"
+msgstr "Pilih periode di mana Anda ingin secara otomatis memposting baris penyusutan aset yang berjalan"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__state__close
 #: model:ir.model.fields.selection,name:om_account_asset.selection__asset_asset_report__state__close
 msgid "Close"
-msgstr "Fermer"
+msgstr "Tutup"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 msgid "Closed"
-msgstr "Fermé"
+msgstr "Tutup"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__company_id
@@ -376,40 +358,40 @@ msgstr "Fermé"
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__company_id
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Company"
-msgstr "Entreprise"
+msgstr "Perusahaan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__method
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__method
 msgid "Computation Method"
-msgstr "Méthode de calcul"
+msgstr "Metode Perhitungan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_depreciation_confirmation_wizard
 msgid "Compute Asset"
-msgstr "Calculer l'actif"
+msgstr "Hitung Aset"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Compute Depreciation"
-msgstr "Calculer l'amortissement"
+msgstr "Hitung Penyusutan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Confirm"
-msgstr "Confirmer"
+msgstr "Mengonfirmasi"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/wizard/asset_depreciation_confirmation_wizard.py:0
 msgid "Created Asset Moves"
-msgstr "Mouvements d'actifs créés"
+msgstr "Pergerakan Aset yang Dibuat"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/wizard/asset_depreciation_confirmation_wizard.py:0
 msgid "Created Revenue Moves"
-msgstr "Mouvements de revenus créés"
+msgstr "Pergerakan Pendapatan yang Diciptakan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__create_uid
@@ -418,7 +400,7 @@ msgstr "Mouvements de revenus créés"
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_depreciation_confirmation_wizard__create_uid
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__create_uid
 msgid "Created by"
-msgstr "Créé par"
+msgstr "Dibuat oleh"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__create_date
@@ -427,161 +409,160 @@ msgstr "Créé par"
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_depreciation_confirmation_wizard__create_date
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__create_date
 msgid "Created on"
-msgstr "Créé le"
+msgstr "Dibuat pada"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__depreciated_value
 msgid "Cumulative Depreciation"
-msgstr "Amortissement cumulé"
+msgstr "Penyusutan Kumulatif"
 
 #. module: om_account_asset
 #. odoo-python
-#: code:addons/om_account_asset/models/account_asset.py:0
-#: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__currency_id
+#: code:addons/om_account_asset/models/account_asset.py:0 model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__currency_id
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__currency_id
 msgid "Currency"
-msgstr "Devise"
+msgstr "Mata uang"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 msgid "Current"
-msgstr "Actuel"
+msgstr "Saat ini"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__amount
 msgid "Current Depreciation"
-msgstr "Amortissement actuel"
+msgstr "Depresiasi Saat Ini"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__date
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__date
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 msgid "Date"
-msgstr "Date"
+msgstr "Tanggal"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Date of asset"
-msgstr "Date de l'actif"
+msgstr "Tanggal aset"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Date of asset purchase"
-msgstr "Date d'achat de l'actif"
+msgstr "Tanggal pembelian aset"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Date of depreciation"
-msgstr "Date d'amortissement"
+msgstr "Tanggal penyusutan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Deferred Revenue Account"
-msgstr "Compte de revenus différés"
+msgstr "Akun Pendapatan Ditangguhkan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_product_product__deferred_revenue_category_id
 #: model:ir.model.fields,field_description:om_account_asset.field_product_template__deferred_revenue_category_id
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Deferred Revenue Type"
-msgstr "Type de revenus différés"
+msgstr "Tipe Pendapatan yang Ditangguhkan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 msgid "Deferred Revenues"
-msgstr "Revenus différés"
+msgstr "Pendapatan yang Ditangguhkan"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__method__degressive
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__method__degressive
 msgid "Degressive"
-msgstr "Dégressif"
+msgstr "Degresif"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__method_progress_factor
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__method_progress_factor
 msgid "Degressive Factor"
-msgstr "Facteur dégressif"
+msgstr "Faktor Degresif"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Depreciation"
-msgstr "Amortissement"
+msgstr "Depresiasi"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Depreciation Board"
-msgstr "Tableau d'amortissement"
+msgstr "Dewan Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__depreciation_nbr
 msgid "Depreciation Count"
-msgstr "Nombre d'amortissements"
+msgstr "Hitungan Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__depreciation_date
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__depreciation_date
 msgid "Depreciation Date"
-msgstr "Date d'amortissement"
+msgstr "Tanggal Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__date_first_depreciation
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__date_first_depreciation
 msgid "Depreciation Dates"
-msgstr "Dates d'amortissement"
+msgstr "Tanggal Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__account_depreciation_id
 msgid "Depreciation Entries: Asset Account"
-msgstr "Écritures d'amortissement : Compte d'actif"
+msgstr "Entri Penyusutan: Akun Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__account_depreciation_expense_id
 msgid "Depreciation Entries: Expense Account"
-msgstr "Écritures d'amortissement : Compte de dépenses"
+msgstr "Entri Penyusutan: Akun Beban"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__move_id
 msgid "Depreciation Entry"
-msgstr "Écriture d'amortissement"
+msgstr "Entri Depresiasi"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Depreciation Information"
-msgstr "Informations sur l'amortissement"
+msgstr "Informasi Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__depreciation_line_ids
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Depreciation Lines"
-msgstr "Lignes d'amortissement"
+msgstr "Garis Penyusutan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Depreciation Method"
-msgstr "Méthode d'amortissement"
+msgstr "Metode Penyusutan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Depreciation Month"
-msgstr "Mois d'amortissement"
+msgstr "Bulan Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__name
 msgid "Depreciation Name"
-msgstr "Nom de l'amortissement"
+msgstr "Nama Penyusutan"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/wizard/asset_modify.py:0
 msgid "Depreciation board modified"
-msgstr "Tableau d'amortissement modifié"
+msgstr "Papan penyusutan dimodifikasi"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "Depreciation line posted."
-msgstr "Ligne d'amortissement comptabilisée."
+msgstr "Baris penyusutan diposting."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__display_name
@@ -591,79 +572,79 @@ msgstr "Ligne d'amortissement comptabilisée."
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_depreciation_confirmation_wizard__display_name
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__display_name
 msgid "Display Name"
-msgstr "Nom affiché"
+msgstr "Nama Tampilan"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "Disposal Move"
-msgstr "Mouvement de cession"
+msgstr "Pembuangan Pindah"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "Disposal Moves"
-msgstr "Mouvements de cession"
+msgstr "Gerakan Pembuangan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__distribution_analytic_account_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__distribution_analytic_account_ids
 msgid "Distribution Analytic Account"
-msgstr "Compte analytique de distribution"
+msgstr "Akun Analitik Distribusi"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "Document closed."
-msgstr "Document fermé."
+msgstr "Dokumen ditutup."
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__state__draft
 #: model:ir.model.fields.selection,name:om_account_asset.selection__asset_asset_report__state__draft
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Draft"
-msgstr "Brouillon"
+msgstr "Draf"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__method_end
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__method_time__end
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__method_time__end
 msgid "Ending Date"
-msgstr "Date de fin"
+msgstr "Tanggal Berakhir"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__method_end
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__method_end
 msgid "Ending date"
-msgstr "Date de fin"
+msgstr "Tanggal berakhir"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Extended Filters..."
-msgstr "Filtres étendus..."
+msgstr "Filter yang Diperluas..."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__first_depreciation_manual_date
 msgid "First Depreciation Date"
-msgstr "Date du premier amortissement"
+msgstr "Tanggal Penyusutan Pertama"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_follower_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_follower_ids
 msgid "Followers"
-msgstr "Abonnés"
+msgstr "Pengikut"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_partner_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Abonnés (Partenaires)"
+msgstr "Pengikut (Mitra)"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__activity_type_icon
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Icône Font Awesome, par ex. fa-tasks"
+msgstr "Font ikon awesome contohnya fa-tasks"
 
 #. module: om_account_asset
 #: model_terms:ir.actions.act_window,help:om_account_asset.action_asset_asset_report
@@ -671,58 +652,56 @@ msgid ""
 "From this report, you can have an overview on all depreciations. The\n"
 "            search bar can also be used to personalize your assets depreciation reporting."
 msgstr ""
-"À partir de ce rapport, vous pouvez avoir une vue d'ensemble de tous les "
-"amortissements. La\n"
-"            barre de recherche peut également être utilisée pour personnaliser vos rapports "
-"d'amortissement des actifs."
+"Dari laporan ini, Anda dapat memperoleh gambaran umum tentang semua penyusutan. Itu\n"
+"            bilah pencarian juga dapat digunakan untuk mempersonalisasi pelaporan penyusutan aset Anda."
 
 #. module: om_account_asset
 #: model:ir.ui.menu,name:om_account_asset.menu_asset_depreciation_confirmation_wizard
 msgid "Generate Assets Entries"
-msgstr "Générer les écritures d'actifs"
+msgstr "Hasilkan Entri Aset"
 
 #. module: om_account_asset
 #: model:ir.ui.menu,name:om_account_asset.menu_finance_entries_generate_entries
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_depreciation_confirmation_wizard
 msgid "Generate Entries"
-msgstr "Générer les écritures"
+msgstr "Hasilkan Entri"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__gross_value
 msgid "Gross Amount"
-msgstr "Montant brut"
+msgstr "Jumlah Kotor"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__value
 msgid "Gross Value"
-msgstr "Valeur brute"
+msgstr "Nilai Kotor"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Gross value of asset"
-msgstr "Valeur brute de l'actif"
+msgstr "Nilai kotor aset"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Group By"
-msgstr "Regrouper par"
+msgstr "Kelompokkan Berdasarkan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_search
 msgid "Group By..."
-msgstr "Regrouper par..."
+msgstr "Kelompokkan Berdasarkan..."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__group_entries
 msgid "Group Journal Entries"
-msgstr "Regrouper les écritures comptables"
+msgstr "Entri Jurnal Grup"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__has_message
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__has_message
 msgid "Has Message"
-msgstr "A un message"
+msgstr "Memiliki Pesan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__id
@@ -738,19 +717,19 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_exception_icon
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_exception_icon
 msgid "Icon"
-msgstr "Icône"
+msgstr "Ikon"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__activity_exception_icon
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr "Icône pour indiquer une activité d'exception."
+msgstr "Ikon untuk menunjukkan aktivitas pengecualian."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__message_needaction
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Si coché, les nouveaux messages requièrent votre attention."
+msgstr "Jika dicentang, pesan baru memerlukan perhatian Anda."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__message_has_error
@@ -758,71 +737,69 @@ msgstr "Si coché, les nouveaux messages requièrent votre attention."
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__message_has_error
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Si coché, certains messages ont une erreur de livraison."
+msgstr "Jika dicentang, beberapa pesan mengalami kesalahan pengiriman."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__prorata
 msgid ""
-"Indicates that the first depreciation entry for this asset have to be done "
-"from the asset date (purchase date) instead of the first January / Start "
+"Indicates that the first depreciation entry for this asset have to be done from the asset date (purchase date) instead of the first January / Start "
 "date of fiscal year"
 msgstr ""
-"Indique que la première écriture d'amortissement pour cet actif doit être "
-"effectuée à partir de la date de l'actif (date d'achat) plutôt que du 1er "
-"janvier / date de début de l'exercice fiscal"
+"Menunjukkan bahwa entri penyusutan pertama untuk aset ini harus dilakukan sejak tanggal aset (tanggal pembelian), bukan tanggal 1 Januari / Tanggal "
+"mulai tahun fiskal"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__prorata
-msgid ""
-"Indicates that the first depreciation entry for this asset have to be done "
-"from the purchase date instead of the first of January"
-msgstr ""
-"Indique que la première écriture d'amortissement pour cet actif doit être "
-"effectuée à partir de la date d'achat plutôt que du 1er janvier"
+msgid "Indicates that the first depreciation entry for this asset have to be done from the purchase date instead of the first of January"
+msgstr "Menunjukkan bahwa entri penyusutan pertama untuk aset ini harus dilakukan sejak tanggal pembelian, bukan tanggal 1 Januari"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__installment_nbr
 msgid "Installment Count"
-msgstr "Nombre d'échéances"
+msgstr "Jumlah Angsuran"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__invoice_id
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Invoice"
-msgstr "Facture"
+msgstr "Faktur"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_is_follower
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_is_follower
 msgid "Is Follower"
-msgstr "Est un abonné"
+msgstr "Adalah Pengikut"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__salvage_value
 msgid "It is the amount you plan to have that you cannot depreciate."
-msgstr "C'est le montant que vous prévoyez de conserver et que vous ne pouvez pas amortir."
+msgstr "Ini adalah jumlah yang Anda rencanakan untuk dimiliki, yang tidak dapat Anda depresiasi."
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Items"
-msgstr "Éléments"
+msgstr "Barang"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__journal_id
 msgid "Journal"
-msgstr "Journal"
+msgstr "Jurnal"
 
 #. module: om_account_asset
 #. odoo-python
-#: code:addons/om_account_asset/models/account_asset.py:0
-#: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
+#: code:addons/om_account_asset/models/account_asset.py:0 model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Journal Entries"
-msgstr "Écritures comptables"
+msgstr "Entri Jurnal"
 
 #. module: om_account_asset
 #: model:ir.model,name:om_account_asset.model_account_move
 msgid "Journal Entry"
-msgstr "Écriture comptable"
+msgstr "Entri Jurnal"
+
+#. module: om_account_asset
+#: model:ir.model,name:om_account_asset.model_account_move_line
+msgid "Journal Item"
+msgstr "Item Jurnal"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__write_uid
@@ -831,7 +808,7 @@ msgstr "Écriture comptable"
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_depreciation_confirmation_wizard__write_uid
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__write_uid
 msgid "Last Updated by"
-msgstr "Dernière mise à jour par"
+msgstr "Terakhir Diperbarui oleh"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__write_date
@@ -840,210 +817,205 @@ msgstr "Dernière mise à jour par"
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_depreciation_confirmation_wizard__write_date
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__write_date
 msgid "Last Updated on"
-msgstr "Dernière mise à jour le"
+msgstr "Terakhir Diperbarui pada"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__method__linear
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__method__linear
 msgid "Linear"
-msgstr "Linéaire"
+msgstr "Linier"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__move_check
 msgid "Linked"
-msgstr "Lié"
+msgstr "Tertaut"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__date_first_depreciation__manual
 msgid "Manual"
-msgstr "Manuel"
+msgstr "Manual"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__date_first_depreciation__manual
 msgid "Manual (Defaulted on Purchase Date)"
-msgstr "Manuel (par défaut à la date d'achat)"
+msgstr "Manual (Bawaan/Standar pada Tanggal Pembelian)"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_has_error
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_has_error
 msgid "Message Delivery error"
-msgstr "Erreur de livraison du message"
+msgstr "Kesalahan Pengiriman Pesan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_ids
 msgid "Messages"
-msgstr "Messages"
+msgstr "Pesan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.asset_modify_form
 msgid "Modify"
-msgstr "Modifier"
+msgstr "Memodifikasi"
 
 #. module: om_account_asset
-#: model:ir.actions.act_window,name:om_account_asset.action_asset_modify
-#: model:ir.model,name:om_account_asset.model_asset_modify
+#: model:ir.actions.act_window,name:om_account_asset.action_asset_modify model:ir.model,name:om_account_asset.model_asset_modify
 #: model_terms:ir.ui.view,arch_db:om_account_asset.asset_modify_form
 msgid "Modify Asset"
-msgstr "Modifier l'actif"
+msgstr "Ubah Aset"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Modify Depreciation"
-msgstr "Modifier l'amortissement"
+msgstr "Ubah Depresiasi"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_move_line__asset_mrr
 msgid "Monthly Recurring Revenue"
-msgstr "Revenu récurrent mensuel"
+msgstr "Pendapatan Berulang Bulanan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__my_activity_date_deadline
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr "Date limite de mon activité"
+msgstr "Batas Waktu Aktivitas Saya"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_date_deadline
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Date limite de la prochaine activité"
+msgstr "Batas Waktu Kegiatan Berikutnya"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_summary
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_summary
 msgid "Next Activity Summary"
-msgstr "Résumé de la prochaine activité"
+msgstr "Ringkasan Kegiatan Berikutnya"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_type_id
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_type_id
 msgid "Next Activity Type"
-msgstr "Type de la prochaine activité"
+msgstr "Jenis Aktivitas Berikutnya"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__remaining_value
 msgid "Next Period Depreciation"
-msgstr "Amortissement de la prochaine période"
+msgstr "Penyusutan Periode Berikutnya"
 
 #. module: om_account_asset
 #: model_terms:ir.actions.act_window,help:om_account_asset.action_asset_asset_report
 msgid "No content"
-msgstr "Aucun contenu"
+msgstr "Tidak ada konten"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__note
 msgid "Note"
-msgstr "Note"
+msgstr "Catatan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__first_depreciation_manual_date
 msgid ""
-"Note that this date does not alter the computation of the first journal "
-"entry in case of prorata temporis assets. It simply changes its accounting "
-"date"
+"Note that this date does not alter the computation of the first journal entry in case of prorata temporis assets. It simply changes its accounting date"
 msgstr ""
-"Notez que cette date ne modifie pas le calcul de la première écriture "
-"comptable en cas d'actifs prorata temporis. Elle change simplement sa date "
-"comptable"
+"Perlu dicatat bahwa tanggal ini tidak mengubah perhitungan entri jurnal pertama dalam kasus aset prorata temporis. Itu hanya mengubah tanggal "
+"akuntansinya"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_needaction_counter
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_needaction_counter
 msgid "Number of Actions"
-msgstr "Nombre d'actions"
+msgstr "Jumlah Tindakan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__method_number
 msgid "Number of Depreciation"
-msgstr "Nombre d'amortissements"
+msgstr "Jumlah Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__method_number
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__method_number
 msgid "Number of Depreciations"
-msgstr "Nombre d'amortissements"
+msgstr "Jumlah Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__method_time__number
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__method_time__number
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Number of Entries"
-msgstr "Nombre d'écritures"
+msgstr "Jumlah Entri"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__method_period
 msgid "Number of Months in a Period"
-msgstr "Nombre de mois dans une période"
+msgstr "Jumlah Bulan dalam Suatu Periode"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_has_error_counter
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_has_error_counter
 msgid "Number of errors"
-msgstr "Nombre d'erreurs"
+msgstr "Jumlah kesalahan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__message_needaction_counter
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Nombre de messages nécessitant une action"
+msgstr "Jumlah pesan yang memerlukan tindakan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__message_has_error_counter
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr "Nombre de messages avec erreur de livraison"
+msgstr "Jumlah pesan dengan kesalahan pengiriman"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "One Entry Every"
-msgstr "Une écriture tous les"
+msgstr "Satu Entri Setiap"
 
 #. module: om_account_asset
 #. odoo-python
-#: code:addons/om_account_asset/models/account_asset.py:0
-#: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__partner_id
+#: code:addons/om_account_asset/models/account_asset.py:0 model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__partner_id
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__partner_id
 msgid "Partner"
-msgstr "Partenaire"
+msgstr "Mitra"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__method_period
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__method_period
 msgid "Period Length"
-msgstr "Durée de la période"
+msgstr "Panjang Periode"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Periodicity"
-msgstr "Périodicité"
+msgstr "Periodisitas"
 
 #. module: om_account_asset
 #: model:ir.actions.act_window,name:om_account_asset.action_asset_depreciation_confirmation_wizard
 msgid "Post Depreciation Lines"
-msgstr "Comptabiliser les lignes d'amortissement"
+msgstr "Garis Pasca Penyusutan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__move_posted_check
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__move_check
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Posted"
-msgstr "Comptabilisé"
+msgstr "Diposting"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__posted_value
 msgid "Posted Amount"
-msgstr "Montant comptabilisé"
+msgstr "Jumlah yang Diposting"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Posted depreciation lines"
-msgstr "Lignes d'amortissement comptabilisées"
+msgstr "Garis penyusutan yang diposting"
 
 #. module: om_account_asset
 #: model:ir.model,name:om_account_asset.model_product_template
 msgid "Product"
-msgstr "Produit"
+msgstr "Produk"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__prorata
@@ -1054,127 +1026,123 @@ msgstr "Prorata Temporis"
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
-msgid ""
-"Prorata temporis can be applied only for the \"number of depreciations\" "
-"time method."
-msgstr ""
-"Le prorata temporis ne peut être appliqué que pour la méthode temporelle "
-"\"nombre d'amortissements\"."
+msgid "Prorata temporis can be applied only for the \"number of depreciations\" time method."
+msgstr "Prorata temporis hanya dapat diterapkan untuk metode waktu “jumlah penyusutan”."
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 msgid "Purchase"
-msgstr "Achat"
+msgstr "Pembelian"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Purchase Month"
-msgstr "Mois d'achat"
+msgstr "Bulan Pembelian"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__type__purchase
 msgid "Purchase: Asset"
-msgstr "Achat : Actif"
+msgstr "Pembelian: Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_modify__name
 msgid "Reason"
-msgstr "Raison"
+msgstr "Alasan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Recognition Account"
-msgstr "Compte de reconnaissance"
+msgstr "Akun Pengakuan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Recognition Income Account"
-msgstr "Compte de reconnaissance des revenus"
+msgstr "Akun Pendapatan Pengakuan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__code
 msgid "Reference"
-msgstr "Référence"
+msgstr "Referensi"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Residual"
-msgstr "Résiduel"
+msgstr "Sisa"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__value_residual
 msgid "Residual Value"
-msgstr "Valeur résiduelle"
+msgstr "Nilai Sisa"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__activity_user_id
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__activity_user_id
 msgid "Responsible User"
-msgstr "Utilisateur responsable"
+msgstr "Pengguna yang Bertanggung Jawab"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_asset__state__open
 #: model:ir.model.fields.selection,name:om_account_asset.selection__asset_asset_report__state__open
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_asset_report_search
 msgid "Running"
-msgstr "En cours"
+msgstr "Berjalan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__message_has_sms_error
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "Erreur de livraison SMS"
+msgstr "Kesalahan Pengiriman SMS"
 
 #. module: om_account_asset
 #: model:ir.model.fields.selection,name:om_account_asset.selection__account_asset_category__type__sale
 msgid "Sale: Revenue Recognition"
-msgstr "Vente : Reconnaissance des revenus"
+msgstr "Penjualan: Pengakuan Pendapatan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 msgid "Sales"
-msgstr "Ventes"
+msgstr "Penjualan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__salvage_value
 msgid "Salvage Value"
-msgstr "Valeur de récupération"
+msgstr "Nilai Sisa"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 msgid "Search Asset Category"
-msgstr "Rechercher une catégorie d'actif"
+msgstr "Kategori Aset Pencarian"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Sell or Dispose"
-msgstr "Vendre ou céder"
+msgstr "Jual atau Buang"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__sequence
 msgid "Sequence"
-msgstr "Séquence"
+msgstr "Urutan"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "Set to Draft"
-msgstr "Repasser en brouillon"
+msgstr "Setel ke Draf"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__method_period
 msgid "State here the time between 2 depreciations, in months"
-msgstr "Indiquez ici le temps entre 2 amortissements, en mois"
+msgstr "Nyatakan di sini waktu antara 2 penyusutan, dalam bulan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_depreciation_line__parent_state
 msgid "State of Asset"
-msgstr "État de l'actif"
+msgstr "Keadaan Aset"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__state
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__state
 msgid "Status"
-msgstr "Statut"
+msgstr "Status"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__activity_state
@@ -1185,74 +1153,65 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Statut basé sur les activités\n"
-"En retard : La date limite est déjà dépassée\n"
-"Aujourd'hui : La date de l'activité est aujourd'hui\n"
-"Planifié : Activités futures."
+"Status berdasarkan aktivitas\n"
+"Terlambat: Tanggal jatuh tempo sudah lewat\n"
+"Hari ini: Tanggal aktivitas adalah hari ini\n"
+"Direncanakan: Kegiatan di masa depan."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__method_period
 msgid "The amount of time between two depreciations, in months"
-msgstr "Le laps de temps entre deux amortissements, en mois"
+msgstr "Jumlah waktu antara dua penyusutan, dalam bulan"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/wizard/asset_modify.py:0
-msgid ""
-"The number of depreciations must be greater than the number of posted or "
-"draft entries to allow for complete depreciation of the asset."
-msgstr ""
-"Le nombre d'amortissements doit être supérieur au nombre d'écritures "
-"comptabilisées ou en brouillon pour permettre un amortissement complet de "
-"l'actif."
+msgid "The number of depreciations must be greater than the number of posted or draft entries to allow for complete depreciation of the asset."
+msgstr "Jumlah penyusutan harus lebih besar dari jumlah entri yang diposting atau draft untuk memungkinkan penyusutan aset sepenuhnya."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__method_number
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__method_number
 msgid "The number of depreciations needed to depreciate your asset"
-msgstr "Le nombre d'amortissements nécessaires pour amortir votre actif"
+msgstr "Jumlah penyusutan yang diperlukan untuk mendepresiasi aset Anda"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_move.py:0
-msgid ""
-"The number of depreciations or the period length of your asset category "
-"cannot be 0."
-msgstr ""
-"Le nombre d'amortissements ou la durée de la période de votre catégorie "
-"d'actif ne peut pas être 0."
+msgid "The number of depreciations or the period length of your asset category cannot be 0."
+msgstr "Jumlah penyusutan atau jangka waktu kategori aset Anda tidak boleh 0."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__date_first_depreciation
 msgid ""
 "The way to compute the date of the first depreciation.\n"
-"  * Based on last day of purchase period: The depreciation dates will be based on the last day of the purchase month or the purchase year (depending on the periodicity of the depreciations).\n"
+"  * Based on last day of purchase period: The depreciation dates will be based on the last day of the purchase month or the purchase year (depending "
+"on the periodicity of the depreciations).\n"
 "  * Based on purchase date: The depreciation dates will be based on the purchase date."
 msgstr ""
-"La manière de calculer la date du premier amortissement.\n"
-"  * Basé sur le dernier jour de la période d'achat : Les dates d'amortissement seront basées sur le dernier jour du mois d'achat ou de l'année d'achat (selon la périodicité des amortissements).\n"
-"  * Basé sur la date d'achat : Les dates d'amortissement seront basées sur la date d'achat."
+"Cara menghitung tanggal penyusutan pertama.\n"
+"  * Berdasarkan hari terakhir periode pembelian: Tanggal penyusutan akan didasarkan pada hari terakhir bulan pembelian atau tahun pembelian "
+"(tergantung pada frekuensi penyusutan).\n"
+"  * Berdasarkan tanggal pembelian: Tanggal penyusutan akan didasarkan pada tanggal pembelian."
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__date_first_depreciation
 msgid ""
 "The way to compute the date of the first depreciation.\n"
-"  * Based on last day of purchase period: The depreciation dates will be based on the last day of the purchase month or the purchase year (depending on the periodicity of the depreciations).\n"
+"  * Based on last day of purchase period: The depreciation dates will be based on the last day of the purchase month or the purchase year (depending "
+"on the periodicity of the depreciations).\n"
 "  * Based on purchase date: The depreciation dates will be based on the purchase date.\n"
 msgstr ""
-"La manière de calculer la date du premier amortissement.\n"
-"  * Basé sur le dernier jour de la période d'achat : Les dates d'amortissement seront basées sur le dernier jour du mois d'achat ou de l'année d'achat (selon la périodicité des amortissements).\n"
-"  * Basé sur la date d'achat : Les dates d'amortissement seront basées sur la date d'achat.\n"
+"Cara menghitung tanggal penyusutan pertama.\n"
+"  * Berdasarkan hari terakhir periode pembelian: Tanggal penyusutan akan didasarkan pada hari terakhir bulan pembelian atau tahun pembelian "
+"(tergantung pada frekuensi penyusutan).\n"
+"  * Berdasarkan tanggal pembelian: Tanggal penyusutan akan didasarkan pada tanggal pembelian.\n"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
-msgid ""
-"This depreciation is already linked to a journal entry. Please post or "
-"delete it."
-msgstr ""
-"Cet amortissement est déjà lié à une écriture comptable. Veuillez le "
-"comptabiliser ou le supprimer."
+msgid "This depreciation is already linked to a journal entry. Please post or delete it."
+msgstr "Penyusutan ini sudah dikaitkan dengan entri jurnal. Silakan posting atau hapus."
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_asset_depreciation_confirmation_wizard
@@ -1261,63 +1220,63 @@ msgid ""
 "                        This will generate journal entries for all related installment lines on this period\n"
 "                        of asset/revenue recognition as well."
 msgstr ""
-"Cet assistant comptabilisera les lignes d'échéances/amortissements pour le mois sélectionné.<br/>\n"
-"                        Cela générera des écritures comptables pour toutes les lignes d'échéances liées à cette période\n"
-"                        de reconnaissance des actifs/revenus également."
+"Wizard ini akan memposting baris angsuran/penyusutan untuk bulan yang dipilih.<br/>\n"
+"                        Ini akan menghasilkan entri jurnal untuk semua baris angsuran terkait pada periode ini\n"
+"                        pengakuan aset/pendapatan juga."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__method_time
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__method_time
 msgid "Time Method"
-msgstr "Méthode temporelle"
+msgstr "Metode Waktu"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "Time Method Based On"
-msgstr "Méthode temporelle basée sur"
+msgstr "Metode Waktu Berdasarkan"
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__type
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__type
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_search
 msgid "Type"
-msgstr "Type"
+msgstr "Tipe"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__activity_exception_decoration
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Type de l'activité d'exception enregistrée."
+msgstr "Jenis aktivitas pengecualian yang tercatat."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__unposted_value
 msgid "Unposted Amount"
-msgstr "Montant non comptabilisé"
+msgstr "Jumlah yang Belum Diposting"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_purchase_tree
 msgid "Vendor"
-msgstr "Fournisseur"
+msgstr "Penjual"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_move.py:0
 msgid "Vendor bill cancelled."
-msgstr "Facture fournisseur annulée."
+msgstr "Tagihan vendor dibatalkan."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_asset__website_message_ids
 #: model:ir.model.fields,field_description:om_account_asset.field_account_asset_category__website_message_ids
 msgid "Website Messages"
-msgstr "Messages du site web"
+msgstr "Pesan Situs Web"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__website_message_ids
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_category__website_message_ids
 msgid "Website communication history"
-msgstr "Historique de communication du site web"
+msgstr "Riwayat komunikasi situs web"
 
 #. module: om_account_asset
 #: model:ir.model.fields,help:om_account_asset.field_account_asset_asset__state
@@ -1327,62 +1286,62 @@ msgid ""
 "If the asset is confirmed, the status goes in 'Running' and the depreciation lines can be posted in the accounting.\n"
 "You can manually close an asset when the depreciation is over. If the last line of depreciation is posted, the asset automatically goes in that status."
 msgstr ""
-"Lorsqu'un actif est créé, son statut est 'Brouillon'.\n"
-"Si l'actif est confirmé, le statut passe à 'En cours' et les lignes d'amortissement peuvent être comptabilisées.\n"
-"Vous pouvez fermer manuellement un actif lorsque l'amortissement est terminé. Si la dernière ligne d'amortissement est comptabilisée, l'actif passe automatiquement dans cet état."
+"Saat aset dibuat, statusnya adalah 'Draf'.\n"
+"Jika aset sudah dikonfirmasi, statusnya menjadi 'Berjalan' dan garis penyusutan dapat diposting di akuntansi.\n"
+"Anda dapat menutup aset secara manual saat penyusutan selesai. Jika baris terakhir penyusutan diposting, aset secara otomatis masuk dalam status "
+"tersebut."
 
 #. module: om_account_asset
 #: model:ir.model.fields,field_description:om_account_asset.field_asset_asset_report__name
 msgid "Year"
-msgstr "Année"
+msgstr "Tahun"
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "You cannot delete a document that contains posted entries."
-msgstr "Vous ne pouvez pas supprimer un document qui contient des écritures comptabilisées."
+msgstr "Anda tidak dapat menghapus dokumen yang berisi entri yang diposting."
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "You cannot delete a document that is in %s state."
-msgstr "Vous ne pouvez pas supprimer un document qui est dans l'état %s."
+msgstr "Anda tidak dapat menghapus dokumen yang berstatus %s."
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "You cannot delete posted depreciation lines."
-msgstr "Vous ne pouvez pas supprimer des lignes d'amortissement comptabilisées."
+msgstr "Anda tidak dapat menghapus garis penyusutan yang diposting."
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_asset.py:0
 msgid "You cannot delete posted installment lines."
-msgstr "Vous ne pouvez pas supprimer des lignes d'échéances comptabilisées."
+msgstr "Anda tidak dapat menghapus baris angsuran yang diposting."
 
 #. module: om_account_asset
 #. odoo-python
 #: code:addons/om_account_asset/models/account_move.py:0
 msgid "You cannot reset to draft for an entry having a posted asset"
-msgstr "Vous ne pouvez pas repasser en brouillon une écriture ayant un actif comptabilisé"
+msgstr "Anda tidak dapat menyetel ulang ke draf untuk entri yang memiliki aset yang diposting"
 
 #. module: om_account_asset
 #: model:ir.model,name:om_account_asset.model_asset_depreciation_confirmation_wizard
 msgid "asset.depreciation.confirmation.wizard"
-msgstr "assistant.confirmation.amortissement.actif"
+msgstr "aset.depresiasi.konfirmasi.wizard"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "e.g. Computers"
-msgstr "par ex. Ordinateurs"
+msgstr "misalnya Komputer"
 
 #. module: om_account_asset
 #: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_asset_form
 msgid "e.g. Laptop iBook"
-msgstr "par ex. Ordinateur portable iBook"
+msgstr "misalnya Laptop iBook"
 
 #. module: om_account_asset
-#: model_terms:ir.ui.view,arch_db:om_account_asset.asset_modify_form
-#: model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
+#: model_terms:ir.ui.view,arch_db:om_account_asset.asset_modify_form model_terms:ir.ui.view,arch_db:om_account_asset.view_account_asset_category_form
 msgid "months"
-msgstr "mois"
+msgstr "bulan"
