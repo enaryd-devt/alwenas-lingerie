@@ -1,4 +1,8 @@
-<data>
+<odoo>
+
+    <template id="primetech_invoice_report"
+              inherit_id="account.report_invoice_document">
+              
        <!-- Bloc Date et partenaire -->
     <xpath expr="//span[@t-field='o.name']/.." position="replace">
         <!-- Date du jour -->
@@ -461,4 +465,6 @@
 </xpath>
 
                 
-</data>
+    </template>
+
+</odoo>
