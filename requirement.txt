@@ -1,0 +1,4 @@
+packaging
+paramiko<4.0.0
+pysftp==0.2.9
+odoo_test_helper
