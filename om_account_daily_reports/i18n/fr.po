@@ -4,16 +4,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0-20250218\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-14 15:02+0000\n"
-"PO-Revision-Date: 2025-03-14 15:02+0000\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2022-04-15 06:44+0000\n"
+"PO-Revision-Date: 2022-07-06 00:10+0200\n"
+"Last-Translator: Sylvain Lc\n"
 "Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.1\n"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
@@ -27,42 +29,42 @@ msgstr "<strong>Date de fin :</strong>"
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "<strong>Journals:</strong>"
-msgstr "<strong>Journaux :</strong>"
+msgstr "<strong>Journaux:</strong>"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 msgid "<strong>Sorted By:</strong>"
-msgstr "<strong>Trié par :</strong>"
+msgstr "<strong>Trié par:</strong>"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "<strong>Start Date:</strong>"
-msgstr "<strong>Date de début :</strong>"
+msgstr "<strong>Date de début:</strong>"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "<strong>Target Moves:</strong>"
-msgstr "<strong>Mouvements ciblés :</strong>"
+msgstr "<strong>Déplacements cibles:</strong>"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
 msgid "Account Bank Book"
-msgstr "Livre de banque comptable"
+msgstr "Journal de compte bancaire"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 msgid "Account Cash Book"
-msgstr "Livre de caisse comptable"
+msgstr "Journal de caisse"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "Account Day Book"
-msgstr "Livre journalier comptable"
+msgstr "Journal de comptes"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__account_ids
@@ -75,7 +77,7 @@ msgstr "Comptes"
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__display_account__all
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_cashbook_report__display_account__all
 msgid "All"
-msgstr "Tous"
+msgstr "Toute"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__target_move__all
@@ -92,7 +94,7 @@ msgstr "Toutes les écritures"
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "Balance"
-msgstr "Solde"
+msgstr "Équilibre"
 
 #. module: om_account_daily_reports
 #: model:ir.actions.act_window,name:om_account_daily_reports.action_account_bankbook_menu
@@ -100,12 +102,12 @@ msgstr "Solde"
 #: model:ir.model,name:om_account_daily_reports.model_report_om_account_daily_reports_report_bankbook
 #: model:ir.ui.menu,name:om_account_daily_reports.menu_bankbook
 msgid "Bank Book"
-msgstr "Livre de banque"
+msgstr "Livret de banque"
 
 #. module: om_account_daily_reports
 #: model:ir.model,name:om_account_daily_reports.model_account_bankbook_report
 msgid "Bank Book Report"
-msgstr "Rapport du livre de banque"
+msgstr "Rapport sur le livre de banque"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.account_report_bankbook_view
@@ -125,7 +127,7 @@ msgstr "Livre de caisse"
 #. module: om_account_daily_reports
 #: model:ir.model,name:om_account_daily_reports.model_account_cashbook_report
 msgid "Cash Book Report"
-msgstr "Rapport du livre de caisse"
+msgstr "Rapport de livre de caisse"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__create_uid
@@ -139,7 +141,7 @@ msgstr "Créé par"
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_cashbook_report__create_date
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_daybook_report__create_date
 msgid "Created on"
-msgstr "Créé le"
+msgstr "Créé sur"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
@@ -167,7 +169,7 @@ msgstr "Rapports quotidiens"
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "Date"
-msgstr "Date"
+msgstr "Fecha"
 
 #. module: om_account_daily_reports
 #: model:ir.actions.act_window,name:om_account_daily_reports.action_account_daybook_menu
@@ -175,12 +177,12 @@ msgstr "Date"
 #: model:ir.model,name:om_account_daily_reports.model_report_om_account_daily_reports_report_daybook
 #: model:ir.ui.menu,name:om_account_daily_reports.menu_daybook
 msgid "Day Book"
-msgstr "Livre journalier"
+msgstr "Carnet de jour"
 
 #. module: om_account_daily_reports
 #: model:ir.model,name:om_account_daily_reports.model_account_daybook_report
 msgid "Day Book Report"
-msgstr "Rapport du livre journalier"
+msgstr "Rapport journalier"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
@@ -200,7 +202,7 @@ msgstr "Afficher les comptes"
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_cashbook_report__display_name
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_daybook_report__display_name
 msgid "Display Name"
-msgstr "Nom affiché"
+msgstr "Afficher un nom"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__date_to
@@ -214,15 +216,17 @@ msgstr "Date de fin"
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "Entry Label"
-msgstr "Libellé de l'écriture"
+msgstr "Étiquette d'entrée"
 
 #. module: om_account_daily_reports
-#. odoo-python
 #: code:addons/om_account_daily_reports/report/report_bankbook.py:0
 #: code:addons/om_account_daily_reports/report/report_cashbook.py:0
 #: code:addons/om_account_daily_reports/report/report_daybook.py:0
+#, python-format
 msgid "Form content is missing, this report cannot be printed."
-msgstr "Le contenu du formulaire est manquant, ce rapport ne peut pas être imprimé."
+msgstr ""
+"Le contenu du formulaire est manquant, le rapport ne peut pas être "
+"imprimé."
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__id
@@ -238,9 +242,9 @@ msgid ""
 "If you selected date, this field allow you to add a row to display the "
 "amount of debit/credit/balance that precedes the filter you've set."
 msgstr ""
-"Si vous avez sélectionné une date, ce champ vous permet d'ajouter une ligne "
-"pour afficher le montant du débit/crédit/solde qui précède le filtre que vous "
-"avez défini."
+"Si vous avez sélectionné la date, ce champ vous permet d'ajouter une "
+"ligne pour afficher le montant de débit / crédit / solde qui précède "
+"le filtre que vous avez défini."
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__initial_balance
@@ -259,13 +263,13 @@ msgstr "JRNL"
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__sortby__sort_journal_partner
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_cashbook_report__sortby__sort_journal_partner
 msgid "Journal & Partner"
-msgstr "Journal & Partenaire"
+msgstr "Journal & partenair"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_bankbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 msgid "Journal and Partner"
-msgstr "Journal et Partenaire"
+msgstr "Journal et partenaire"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__journal_ids
@@ -273,6 +277,13 @@ msgstr "Journal et Partenaire"
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_daybook_report__journal_ids
 msgid "Journals"
 msgstr "Journaux"
+
+#. module: om_account_daily_reports
+#: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report____last_update
+#: model:ir.model.fields,field_description:om_account_daily_reports.field_account_cashbook_report____last_update
+#: model:ir.model.fields,field_description:om_account_daily_reports.field_account_daybook_report____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_bankbook_report__write_uid
@@ -310,7 +321,7 @@ msgstr "Partenaire"
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_cashbook
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.report_daybook
 msgid "Posted Entries"
-msgstr "Écritures comptabilisées"
+msgstr "Entrées publiées"
 
 #. module: om_account_daily_reports
 #: model_terms:ir.ui.view,arch_db:om_account_daily_reports.account_report_bankbook_view
@@ -351,16 +362,16 @@ msgstr "Date de début"
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_cashbook_report__target_move
 #: model:ir.model.fields,field_description:om_account_daily_reports.field_account_daybook_report__target_move
 msgid "Target Moves"
-msgstr "Mouvements ciblés"
+msgstr "Mouvements cibles"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__display_account__not_zero
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_cashbook_report__display_account__not_zero
 msgid "With balance is not equal to 0"
-msgstr "Avec un solde différent de 0"
+msgstr "Avec solde n'est pas égal à 0"
 
 #. module: om_account_daily_reports
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_bankbook_report__display_account__movement
 #: model:ir.model.fields.selection,name:om_account_daily_reports.selection__account_cashbook_report__display_account__movement
 msgid "With movements"
-msgstr "Avec mouvements"
+msgstr "Avec des mouvements"
