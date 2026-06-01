@@ -1,0 +1,207 @@
+/* =====================================================
+SYNTHESE GENERALE
+===================================================== */
+
+.summary-section{
+margin-top:8px;
+margin-bottom:10px;
+border:1px solid #c8d9ea;
+background:#f7fbff;
+}
+
+.summary-section h4{
+margin:0;
+padding:6px 10px;
+background:#1f4e79;
+color:white;
+font-size:11px;
+font-weight:bold;
+text-transform:uppercase;
+}
+
+.summary-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.summary-table td{
+padding:6px 8px;
+border-bottom:1px solid #dde6ef;
+}
+
+.summary-table tr:last-child td{
+border-bottom:none;
+}
+
+.summary-table .total-row{
+background:#dce9f7;
+}
+
+.summary-table .total-row td{
+color:#1f4e79;
+font-weight:bold;
+font-size:11px;
+}
+
+/* =====================================================
+ENSEMBLE DES CREANCES
+===================================================== */
+
+.partner-block{
+margin-top:12px;
+margin-bottom:12px;
+border:1px solid #d6dde5;
+background:white;
+page-break-inside:avoid;
+}
+
+.partner-title{
+background:#eef5fb;
+border-left:4px solid #1f4e79;
+color:#1f4e79;
+padding:6px 8px;
+font-size:11px;
+font-weight:bold;
+}
+
+.partner-meta{
+background:#fafbfd;
+padding:4px 8px;
+font-size:9px;
+color:#555;
+border-bottom:1px solid #e6edf5;
+}
+
+.table-stock{
+width:100%;
+border-collapse:collapse;
+}
+
+.table-stock thead{
+background:#edf4fc;
+}
+
+.table-stock th{
+color:#1f4e79;
+font-size:9px;
+font-weight:bold;
+padding:4px;
+border:1px solid #dce3ea;
+}
+
+.table-stock td{
+padding:3px 4px;
+border:1px solid #e4e9ef;
+font-size:9px;
+}
+
+.table-stock tbody tr:nth-child(even){
+background:#fafbfd;
+}
+
+.partner-summary{
+border-top:2px solid #dce3ea;
+}
+
+.partner-summary .total-row{
+background:#eef5fb;
+}
+
+/* =====================================================
+ANALYSE DES ANCIENNETES
+===================================================== */
+
+.aging-section{
+margin-top:15px;
+border:1px solid #e6d5aa;
+background:#fffdf7;
+}
+
+.aging-section h4{
+margin:0;
+padding:6px 10px;
+background:#f6e8b1;
+color:#7a5a00;
+font-size:11px;
+font-weight:bold;
+text-transform:uppercase;
+}
+
+.aging-section table{
+width:100%;
+border-collapse:collapse;
+}
+
+.aging-section th{
+background:#fff5d6;
+color:#7a5a00;
+border:1px solid #ecd89c;
+}
+
+.aging-section td{
+border:1px solid #ecd89c;
+padding:5px;
+}
+
+.aging-section tbody tr:last-child{
+background:#fff0c2;
+font-weight:bold;
+}
+
+/* =====================================================
+OBSERVATIONS
+===================================================== */
+
+.observation-section{
+margin-top:12px;
+border:1px solid #d7e5d0;
+background:#fafdf8;
+}
+
+.observation-section h4{
+margin:0;
+padding:6px 10px;
+background:#dff0d8;
+color:#2f6b2f;
+font-size:11px;
+font-weight:bold;
+}
+
+.observation-section p{
+margin:0;
+padding:8px;
+font-size:9px;
+}
+
+/* =====================================================
+SIGNATURES
+===================================================== */
+
+.signature-table{
+width:100%;
+margin-top:10px;
+border-top:1px solid #dce3ea;
+padding-top:10px;
+}
+
+
+.partner-balance{
+    margin-top:6px;
+    padding:8px 12px;
+    color:#31577b;
+    text-align:left;
+    font-weight:bold;
+    border-radius:3px;
+}
+
+.partner-balance-label{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+}
+
+.partner-balance-value{
+    font-size:11px;
+    font-weight:800;
+    margin-left:8px;
+}

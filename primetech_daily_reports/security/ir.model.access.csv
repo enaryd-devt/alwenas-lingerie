@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cash_flow_report_wizard,access_cash_flow_report_wizard,model_primetech_cash_flow_report_wizard,base.group_user,1,1,1,1
+access_sales_report_wizard,access_sales_report_wizard,model_primetech_sales_report_wizard,base.group_user,1,1,1,1
+access_receivable_report_wizard,access_receivable_report_wizard,model_primetech_receivable_report_wizard,base.group_user,1,1,1,1
+access_report_preview_wizard,access_report_preview_wizard,model_primetech_report_preview_wizard,base.group_user,1,1,1,1

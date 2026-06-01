@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+   <template id="cash_flow_report_template">
+
+    <t t-call="web.html_container">
+
+        <t t-call="web.external_layout">
+
+            <div class="page cashflow-report">
+
+                <h2 class="report-title">
+                    ETAT JOURNALIER DE TRÉSORERIE
+                </h2>
+
+                <div class="row report-header mb-3">
+
+                    <div class="col-6">
+                        <strong>Période :</strong>
+                        <span t-field="docs.date_from"/>
+                        -
+                        <span t-field="docs.date_to"/>
+                    </div>
+
+                    <div class="col-6 text-end">
+                        <strong>Journaux :</strong>
+
+                        <t t-if="docs.journal_ids">
+
+                            <t t-foreach="docs.journal_ids" t-as="journal">
+
+                                <span t-esc="journal.name"/>
+
+                                <t t-if="journal.id != docs.journal_ids[-1].id">
+                                    ,
+                                </t>
+
+                            </t>
+
+                        </t>
+
+                        <t t-else="">
+                            Tous les journaux
+                        </t>
+
+                    </div>
+
+                </div>
+
+                <!-- KPI -->
+
+                <!-- KPI EN TABLE (FORCE HORIZONTAL EN PDF) -->
+                <table style="
+                    width:100%;
+                    border-collapse:collapse;
+                    table-layout:fixed;
+                    margin-bottom:15px;">
+
+                    <tr>
+
+                        <!-- Encaissements -->
+                        <td style="
+                            width:33%;
+                            text-align:center;
+                            padding:10px;">
+
+                            <div style="font-weight:bold;font-size:13px;color:#2e7d32;">
+                                Encaissements
+                            </div>
+
+                            <div style="font-size:18px;font-weight:bold;margin-top:5px;">
+                                <span t-esc="'{:,.0f}'.format(total_in).replace(',', ' ')"/>
+                                FCFA
+                            </div>
+
+                        </td>
+
+                        <!-- Décaissements -->
+                        <td style="
+                            width:33%;
+                            text-align:center;
+                            padding:10px;">
+
+                            <div style="font-weight:bold;font-size:13px;color:#c62828;">
+                                Décaissements
+                            </div>
+
+                            <div style="font-size:18px;font-weight:bold;margin-top:5px;">
+                                <span t-esc="'{:,.0f}'.format(total_out).replace(',', ' ')"/>
+                                FCFA
+                            </div>
+
+                        </td>
+
+                        <!-- Solde Net -->
+                        <td style="
+                            width:34%;
+                            text-align:center;
+                            padding:10px;">
+
+                            <div style="font-weight:bold;font-size:13px;color:#1565c0;">
+                                Solde Global
+                            </div>
+
+                            <div style="font-size:18px;font-weight:bold;margin-top:5px;">
+                                <span t-esc="'{:,.0f}'.format(balance).replace(',', ' ')"/>
+                                FCFA
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <!-- Détail -->
+
+                <h4 class="section-title">
+                    Détail des mouvements
+                </h4>
+
+                <table class="table-detail">
+
+                    <thead>
+                        <tr style="font-weight:bold;">
+                            <th>Date</th>
+                            <th>Journal</th>
+                            <th>Référence</th>
+                            <th>Partenaire</th>
+                            <th>Type</th>
+                            <th>Facture(s)</th>
+                            <th class="text-end">Montant</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr t-foreach="lines" t-as="line">
+
+                            <td>
+                                <span t-esc="line['date']"/>
+                            </td>
+
+                            <td>
+                                <span t-esc="line['journal']"/>
+                            </td>
+
+                            <td>
+                                <span t-esc="line['reference']"/>
+                            </td>
+
+                            <td>
+                                <span t-esc="line['partner']"/>
+                            </td>
+
+                            <td>
+
+                                <span
+                                    t-att-class="'badge-in' if line['type']=='Encaissement' else 'badge-out'">
+
+                                    <span t-esc="line['type']"/>
+
+                                </span>
+
+                            </td>
+                            <td style="font-size:10px; text-align:center;">
+
+                                <t t-if="line.get('invoice')">
+                                    <span t-esc="line['invoice']"/>
+                                </t>
+
+                                <t t-else="">
+                                    --
+                                </t>
+
+                            </td>
+
+                            <td class="text-end">
+
+                                <span
+                                    t-att-class="'amount-in' if line['type']=='Encaissement' else 'amount-out'">
+
+                                    <span t-esc="'{:,.0f}'.format(line['amount']).replace(',', ' ')"/>
+
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                        <!-- ===================================== -->
+                        <!-- SYNTHESE PAR JOURNAL -->
+                        <!-- ===================================== -->
+
+                        <div style="
+                            background:#1f4e79;
+                            color:white;
+                            padding:6px;
+                            font-size:14px;
+                            font-weight:bold;
+                            margin-top:15px;
+                            margin-bottom:0;">
+                            SYNTHÈSE PAR JOURNAL
+                        </div>
+
+                        <table style="
+                            width:100%;
+                            border-collapse:collapse;
+                            font-size:12px;">
+
+                            <thead>
+
+                                <tr style="background:#e9edf2;color:#1f2d3d;">
+
+                                    <th style="border:1px solid #d5dbe3;padding:6px;">
+                                        Journal
+                                    </th>
+
+                                    <th style="border:1px solid #d5dbe3;padding:6px;text-align:right;">
+                                        Solde Initial
+                                    </th>
+
+                                    <th style="border:1px solid #d5dbe3;padding:6px;text-align:right;">
+                                        Entrées
+                                    </th>
+
+                                    <th style="border:1px solid #d5dbe3;padding:6px;text-align:right;">
+                                        Sorties
+                                    </th>
+
+                                    <th style="border:1px solid #d5dbe3;padding:6px;text-align:right;">
+                                        Solde Final
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr t-foreach="journal_summary" t-as="j">
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;">
+                                        <span t-esc="j['name']"/>
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;">
+                                        <span t-esc="'{:,.0f}'.format(j['opening']).replace(',', ' ')"/>
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;color:#2e7d32;font-weight:bold;">
+                                        <span t-esc="'{:,.0f}'.format(j['in']).replace(',', ' ')"/>
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;color:#c62828;font-weight:bold;">
+                                        <span t-esc="'{:,.0f}'.format(j['out']).replace(',', ' ')"/>
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;font-weight:bold;">
+                                        <span t-esc="'{:,.0f}'.format(j['closing']).replace(',', ' ')"/>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                            <tfoot>
+
+                                <tr style="background:#eef1f4;font-weight:bold;">
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;">
+                                        TOTAL GÉNÉRAL
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;">
+                                        <span t-esc="'{:,.0f}'.format(summary_opening).replace(',', ' ')"/>
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;color:#2e7d32;">
+                                        <span t-esc="'{:,.0f}'.format(summary_in).replace(',', ' ')"/>
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;color:#c62828;">
+                                        <span t-esc="'{:,.0f}'.format(summary_out).replace(',', ' ')"/>
+                                    </td>
+
+                                    <td style="border:1px solid #d5dbe3;padding:6px;text-align:right;">
+                                        <span t-esc="'{:,.0f}'.format(summary_closing).replace(',', ' ')"/>
+                                    </td>
+
+                                </tr>
+
+                            </tfoot>
+
+                        </table>
+                        <br/>
+
+                        <div class="observations-section">
+
+                            <h4 class="section-title">
+                                Observations
+                            </h4>
+
+                            <div class="observation-box">
+                            </div>
+
+                        </div>
+                        <table class="signature-table">
+
+                            <tr>
+
+                                <td>
+                                    <strong>Établi par</strong>
+                                    <br/><br/><br/><br/>
+                                    ____________________
+                                </td>
+
+                                <td>
+                                    <strong>Vérifié par</strong>
+                                    <br/><br/><br/><br/>
+                                    ____________________
+                                </td>
+
+                                <td>
+                                    <strong>Approuvé par</strong>
+                                    <br/><br/><br/><br/>
+                                    ____________________
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+            </div>
+
+        </t>
+
+    </t>
+
+</template>
+</odoo>

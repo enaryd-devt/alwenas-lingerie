@@ -15,7 +15,7 @@
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
-        #'views/res_config_settings_views.xml',
+        'views/res_config_settings_views.xml',
         'views/product_product_views.xml',
         'views/product_category_views.xml',
         'views/inventory_low_stock_views.xml',
@@ -25,7 +25,7 @@
             'zehntech_product_low_stock_alert/static/src/css/low_stock_style.css',   
         ],
         'point_of_sale._assets_pos': [
-           # 'zehntech_product_low_stock_alert/static/src/js/pos_low_stock_alert.js',
+            'zehntech_product_low_stock_alert/static/src/js/pos_low_stock_alert.js',
         ],
          
     },

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <template id="receivable_report_template">
+
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+
+        <div class="page receivable-report">
+
+        <!-- ===================================== -->
+        <!-- HEADER PRO -->
+        <!-- ===================================== -->
+
+        <h2 class="report-title"
+            style="font-size:20px;font-weight:bold;margin-bottom:5px;">
+            ETAT DES CRÉANCES PARTENAIRES
+        </h2>
+
+        <!-- ===================================== -->
+        <!-- INFORMATIONS DU RAPPORT -->
+        <!-- ===================================== -->
+
+        <div style="
+            border:1px solid #d9dee3;
+            background:#f8fafc;
+            padding:10px 15px;
+            margin-bottom:20px;
+            border-radius:4px;">
+
+            <table style="
+                width:100%;
+                border-collapse:collapse;
+                font-size:12px;">
+
+                <tr>
+
+                    <td style="width:50%;">
+
+                        <div style="
+                            color:#6b7280;
+                            font-size:11px;
+                            text-transform:uppercase;
+                            margin-bottom:2px;">
+                            Situation des créances au
+                        </div>
+
+                        <div style="
+                            font-size:14px;
+                            font-weight:bold;
+                            color:#1f4e79;">
+
+                            <span t-field="docs.report_date"/>
+
+                        </div>
+
+                    </td>
+
+                    <td style="
+                        width:50%;
+                        text-align:right;">
+
+                        <div style="
+                            color:#6b7280;
+                            font-size:11px;
+                            text-transform:uppercase;
+                            margin-bottom:2px;">
+                            Date d'impression
+                        </div>
+
+                        <div style="
+                            font-size:14px;
+                            font-weight:bold;
+                            color:#374151;">
+
+                            <span t-esc="print_date.strftime('%d/%m/%Y %H:%M')"/>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- ===================================== -->
+        <!-- KPI GLOBALS -->
+        <!-- ===================================== -->
+
+        <table style="
+            width:100%;
+            border-collapse:collapse;
+            margin-bottom:15px;
+            table-layout:fixed;">
+
+            <tr>
+
+                <td style="
+                    width:33%;
+                    text-align:center;
+                    padding:5px;">
+
+                    <div style="
+                        font-size:12px;
+                        font-weight:bold;">
+                        Nombre partenaires
+                    </div>
+
+                    <div style="
+                        font-size:16px;
+                        font-weight:bold;
+                        margin-top:3px;">
+
+                        <span t-esc="partner_count"/>
+
+                    </div>
+
+                </td>
+
+                <td style="
+                    width:33%;
+                    text-align:center;
+                    padding:5px;">
+
+                    <div style="
+                        font-size:12px;
+                        font-weight:bold;">
+                        Factures ouvertes
+                    </div>
+
+                    <div style="
+                        font-size:16px;
+                        font-weight:bold;
+                        margin-top:3px;">
+
+                        <span t-esc="invoice_count"/>
+
+                    </div>
+
+                </td>
+
+                <td style="
+                    width:34%;
+                    text-align:center;
+                    padding:5px;">
+
+                    <div style="
+                        font-size:12px;
+                        font-weight:bold;">
+                        Total créances
+                    </div>
+
+                    <div style="
+                        font-size:16px;
+                        font-weight:bold;
+                        margin-top:3px;">
+
+                        <span t-esc="'{:,.0f}'.format(net_total).replace(',', ' ')"/>
+                        FCFA
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+        </table>
+        <!-- ===================================== -->
+        <!-- TITLE SECTION -->
+        <!-- ===================================== -->
+
+        <div style="font-size:14px;font-weight:bold;margin:10px 0;">
+            LISTE DÉTAILLÉE DES CRÉANCES
+        </div>
+
+        <!-- ===================================== -->
+        <!-- PARTNERS LOOP -->
+        <!-- ===================================== -->
+
+        <t t-foreach="partners_data" t-as="partner">
+
+        <div style="
+            margin-bottom:20px;
+            padding:10px;
+            border:1px solid #ddd;
+            border-radius:6px;">
+
+            <!-- PARTNER HEADER -->
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+
+                <div style="font-size:14px;font-weight:bold;color:#1f4e79;">
+                    <span t-esc="partner['partner_name']"/>
+                </div>
+
+                <div style="font-size:13px;">
+                    <strong>Solde réel :</strong>
+                    <span style="font-weight:bold;">
+                        <span t-esc="'{:,.0f}'.format(partner['balance']).replace(',', ' ')"/>
+                        FCFA
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+            <table class="table-detail" style="width:100%;border-collapse:collapse;font-size:12px;">
+
+                <thead>
+                    <tr style="background:#f2f2f2;font-weight:bold;">
+                        <th style="padding:6px;border:1px solid #ddd;">Date</th>
+                        <th style="padding:6px;border:1px solid #ddd;">Échéance</th>
+                        <th style="padding:6px;border:1px solid #ddd;">Facture</th>
+                        <th style="padding:6px;border:1px solid #ddd;">Référence</th>
+                        <th style="padding:6px;border:1px solid #ddd;text-align:right;">Montant</th>
+                        <th style="padding:6px;border:1px solid #ddd;text-align:right;">Reste à payer</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr t-foreach="partner['lines']" t-as="line">
+
+                        <td style="padding:6px;border:1px solid #ddd;">
+                            <span t-esc="line['date']"/>
+                        </td>
+
+                        <td style="padding:6px;border:1px solid #ddd;">
+                            <span t-esc="line['due_date']"/>
+                        </td>
+
+                        <td style="padding:6px;border:1px solid #ddd;font-weight:bold;">
+                            <span t-esc="line['number']"/>
+                        </td>
+
+                        <td style="padding:6px;border:1px solid #ddd;">
+                            <span t-esc="line['reference']"/>
+                        </td>
+
+                        <td style="padding:6px;border:1px solid #ddd;text-align:right;">
+                            <span t-esc="'{:,.0f}'.format(line['amount_total']).replace(',', ' ')"/>
+                        </td>
+
+                        <td style="padding:6px;border:1px solid #ddd;text-align:right;font-weight:bold;color:#c62828;">
+                            <span t-esc="'{:,.0f}'.format(line['residual']).replace(',', ' ')"/>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        </t>
+
+        <!-- ===================================== -->
+        <!-- SIGNATURES PRO -->
+        <!-- ===================================== -->
+
+        <table style="width:100%;margin-top:30px;text-align:center;font-size:12px;">
+
+            <tr>
+
+                <td>
+                    <strong>Comptable</strong>
+                    <div style="margin-top:40px;border-top:1px solid #000;width:70%;margin-left:auto;margin-right:auto;"></div>
+                </td>
+
+                <td>
+                    <strong>Chef Comptable</strong>
+                    <div style="margin-top:40px;border-top:1px solid #000;width:70%;margin-left:auto;margin-right:auto;"></div>
+                </td>
+
+                <td>
+                    <strong>Direction Financière</strong>
+                    <div style="margin-top:40px;border-top:1px solid #000;width:70%;margin-left:auto;margin-right:auto;"></div>
+                </td>
+
+            </tr>
+
+        </table>
+
+        </div>
+
+        </t>
+        </t>
+
+        </template>
+
+</odoo>

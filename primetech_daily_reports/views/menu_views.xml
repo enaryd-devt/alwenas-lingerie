@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<!-- MENU PRINCIPAL -->
+
+<menuitem
+    id="menu_primetech_reports_root"
+    name="Rapports"
+    parent="account.menu_finance"
+    sequence="10"/>
+
+<!-- ETAT JOURNALIER DE TRESORERIE -->
+
+<menuitem
+    id="menu_cash_flow_report"
+    name="Etat Journalier de Trésorerie"
+    parent="menu_primetech_reports_root"
+    action="action_cash_flow_report_wizard"
+    sequence="10"/>
+
+<!-- ETAT DES CREANCES -->
+
+<menuitem
+    id="menu_receivable_report"
+    name="Etat des Créances"
+    parent="menu_primetech_reports_root"
+    action="action_receivable_report_wizard"
+    sequence="20"/>
+
+<!-- ETAT JOURNALIER DES VENTES -->
+
+<menuitem
+    id="menu_sales_daily_report"
+    name="Etat Journalier des Ventes"
+    parent="menu_primetech_reports_root"
+    action="action_sales_report_wizard"
+    sequence="30"/>
+
+
+</odoo>

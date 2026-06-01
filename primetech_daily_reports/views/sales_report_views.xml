@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="view_sales_report_wizard" model="ir.ui.view">
+        <field name="name">sales.report.wizard.form</field>
+        <field name="model">primetech.sales.report.wizard</field>
+
+        <field name="arch" type="xml">
+
+            <form string="Etat Journalier des Ventes">
+
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+
+             <footer>
+
+                    <button
+                        name="action_preview_report"
+                        type="object"
+                        string="Voir"
+                        class="btn-secondary"/>
+
+                    <button
+                        name="action_print_report"
+                        type="object"
+                        string="Imprimer"
+                        class="btn-primary"/>
+
+                    <button
+                        string="Annuler"
+                        special="cancel"/>
+
+                </footer>
+
+            </form>
+
+        </field>
+    </record>
+
+    <record id="action_sales_report_wizard" model="ir.actions.act_window">
+        <field name="name">Etat Journalier des Ventes</field>
+        <field name="res_model">primetech.sales.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

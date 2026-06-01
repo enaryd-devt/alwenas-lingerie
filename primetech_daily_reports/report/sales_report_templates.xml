@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+        <template id="sales_report_template">
+
+            <t t-call="web.html_container">
+
+                <t t-call="web.external_layout">
+
+                    <link rel="stylesheet"
+                        href="/primetech_daily_reports/static/src/css/sales_report.css"/>
+
+                        <span t-esc="print_date.strftime('%d/%m/%Y %H:%M:%S')"/>
+
+                    <div class="page">
+
+                        <div class="report-title">
+                            ETAT DES VENTES
+                        </div>
+
+                        <table style="width:100%;" class="report-period">
+
+                            <tr>
+
+                                <td style="white-space: nowrap;">
+
+                                    <strong>Période :</strong>
+
+                                    <span t-esc="docs.date_from"/>
+
+                                    au
+
+                                    <span t-esc="docs.date_to"/>
+
+                                    <span style="margin-left:30px;">
+
+                                        <strong>Imprimé le :</strong>
+
+                                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y %H:%M:%S')"/>
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+                        <table class="summary-report">
+
+                            <thead>
+
+                                <tr style="font-weight:bold;">
+
+                                    <th>Facture</th>
+                                    <th>Date</th>
+                                    <th>Client</th>
+                                    <th>Vendeur</th>
+                                    <th>Article</th>
+                                    <th>Qté</th>
+                                    <th>PU HT</th>
+
+                                    <t t-if="show_discount">
+                                        <th>Remise %</th>
+                                    </t>
+
+                                    <th>Total HT</th>
+                                    <th>Total TTC</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr t-foreach="lines"
+                                    t-as="line">
+
+                                    <td>
+                                        <span t-esc="line['invoice']"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-esc="line['date']"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-esc="line['customer']"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-esc="line['salesperson']"/>
+                                    </td>
+
+                                    <td>
+                                        <span t-esc="line['product']"/>
+                                    </td>
+
+                                    <td class="summary-qty">
+                                        <span t-esc="int(line['qty'])"/>
+                                    </td>
+
+                                    <td class="summary-money">
+                                        <span t-esc="'{:,.0f}'.format(line['unit_price']).replace(',', ' ')"/>
+                                    </td>
+
+                                    <t t-if="show_discount">
+
+                                        <td class="summary-qty">
+                                            <span t-esc="line['discount']"/>
+                                        </td>
+
+                                    </t>
+
+                                    <td class="summary-money">
+                                        <span t-esc="'{:,.0f}'.format(line['total_ht']).replace(',', ' ')"/>
+                                    </td>
+
+                                    <td class="summary-money">
+                                        <span t-esc="'{:,.0f}'.format(line['total_ttc']).replace(',', ' ')"/>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <div class="section-title">
+                            RÉSUMÉ GÉNÉRAL
+                        </div>
+
+                        <table class="summary-table">
+
+                            <tr>
+                                <td class="summary-label">Nombre de factures</td>
+                                <td class="summary-value">
+                                    <span t-esc="invoice_count"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="summary-label">Nombre de clients</td>
+                                <td class="summary-value">
+                                    <span t-esc="customer_count"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="summary-label">Nombre de vendeurs</td>
+                                <td class="summary-value">
+                                    <span t-esc="seller_count"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="summary-label">Chiffre D'affaire Hors Taxes</td>
+                                <td class="summary-value">
+                                    <span t-esc="'{:,.0f} FCFA'.format(grand_total_ht).replace(',', ' ')"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="summary-label">Chiffre D'affaire TTC</td>
+                                <td class="summary-value">
+                                    <span t-esc="'{:,.0f} FCFA'.format(grand_total_ttc).replace(',', ' ')"/>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <div class="section-title">
+                            SYNTHÈSE PAR VENDEUR
+                        </div>
+
+                            <table class="summary-report">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Vendeur</th>
+                                        <th>Quantité Vendue</th>
+                                        <th>CA HT</th>
+                                        <th>CA TTC</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr
+                                        t-foreach="seller_summary.items()"
+                                        t-as="seller">
+
+                                        <td>
+                                            <span t-esc="seller[0]"/>
+                                        </td>
+
+                                        <td class="summary-qty">
+                                            <span t-esc="seller[1]['qty']"/>
+                                        </td>
+
+                                        <td class="summary-money">
+                                            <span t-esc="'{:,.0f} FCFA'.format(
+                                                seller[1]['ca_ht']
+                                            ).replace(',', ' ')"/>
+                                        </td>
+
+                                        <td class="summary-money">
+                                            <span t-esc="'{:,.0f} FCFA'.format(
+                                                seller[1]['ca_ttc']
+                                            ).replace(',', ' ')"/>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                        <div class="section-title">
+                            SYNTHÈSE PAR CLIENT
+                        </div>
+
+                            <table class="summary-report">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Client</th>
+                                        <th>CA HT</th>
+                                        <th>CA TTC</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr
+                                        t-foreach="customer_summary.items()"
+                                        t-as="customer">
+
+                                        <td>
+                                            <span t-esc="customer[0]"/>
+                                        </td>
+
+                                        <td class="summary-money">
+                                            <span t-esc="'{:,.0f} FCFA'.format(
+                                                customer[1]['ca_ht']
+                                            ).replace(',', ' ')"/>
+                                        </td>
+
+                                        <td class="summary-money">
+                                            <span t-esc="'{:,.0f} FCFA'.format(
+                                                customer[1]['ca_ttc']
+                                            ).replace(',', ' ')"/>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                        <div class="section-title">
+                            SYNTHÈSE PAR ARTICLE
+                        </div>
+
+                            <table class="summary-report">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Article</th>
+                                        <th>Quantité Vendue</th>
+                                        <th>CA HT</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr
+                                        t-foreach="product_summary.items()"
+                                        t-as="product">
+
+                                        <td>
+                                            <span t-esc="product[0]"/>
+                                        </td>
+
+                                        <td class="summary-qty">
+                                            <span t-esc="product[1]['qty']"/>
+                                        </td>
+
+                                        <td class="summary-money">
+                                            <span t-esc="'{:,.0f} FCFA'.format(
+                                                product[1]['ca_ht']
+                                            ).replace(',', ' ')"/>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        <hr style="margin-top:25px; font-size:16px"/>
+                        <table class="signature-table">
+
+                            <tr>
+
+                                <td>
+
+                                    Établi par
+
+                                    <div class="signature-line">
+                                        ________________________________
+                                    </div>
+
+                                </td>
+
+                                <td>
+
+                                    Vérifié par
+
+                                    <div class="signature-line">
+                                        ________________________________
+                                    </div>
+
+                                </td>
+
+                                <td>
+
+                                    Approuvé par
+
+                                    <div class="signature-line">
+                                        ________________________________
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </template>
+
+</odoo>

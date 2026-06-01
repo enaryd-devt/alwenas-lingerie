@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_cash_flow_report"  model="ir.actions.report">
+
+        <field name="name">Etat Journalier de Trésorerie</field>
+
+        <field name="model">primetech.cash.flow.report.wizard</field>
+
+        <field name="report_type">qweb-pdf</field>
+
+        <field name="report_name">primetech_daily_reports.cash_flow_report_template</field>
+
+        <field name="report_file">primetech_daily_reports.cash_flow_report_template</field>
+
+    </record>
+
+    <record id="action_sales_report" model="ir.actions.report">
+
+        <field name="name">Etat Journalier des Ventes</field>
+
+        <field name="model">primetech.sales.report.wizard</field>
+
+        <field name="report_type">qweb-pdf</field>
+
+        <field name="report_name">primetech_daily_reports.sales_report_template</field>
+
+        <field name="report_file">primetech_daily_reports.sales_report_template</field>
+
+    </record>
+
+    <record id="action_receivable_report" model="ir.actions.report">
+
+        <field name="name">Etat des Créances</field>
+
+        <field name="model">primetech.receivable.report.wizard</field>
+
+        <field name="report_type">qweb-pdf</field>
+
+        <field name="report_name">primetech_daily_reports.receivable_report_template</field>
+
+        <field name="report_file"> primetech_daily_reports.receivable_report_template</field>
+
+    </record>
+
+</odoo>
