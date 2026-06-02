@@ -14,7 +14,7 @@
 
 <menuitem
     id="menu_cash_flow_report"
-    name="Etat Journalier de Trésorerie"
+    name="Etat Périodique de Trésorerie"
     parent="menu_primetech_reports_root"
     action="action_cash_flow_report_wizard"
     sequence="10"/>
@@ -32,7 +32,7 @@
 
 <menuitem
     id="menu_sales_daily_report"
-    name="Etat Journalier des Ventes"
+    name="Etat Périodique des Ventes"
     parent="menu_primetech_reports_root"
     action="action_sales_report_wizard"
     sequence="30"/>

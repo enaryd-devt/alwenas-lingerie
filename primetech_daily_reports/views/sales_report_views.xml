@@ -8,7 +8,7 @@
 
         <field name="arch" type="xml">
 
-            <form string="Etat Journalier des Ventes">
+            <form string="Etat Périodique des Ventes">
 
                 <group>
                     <field name="date_from"/>

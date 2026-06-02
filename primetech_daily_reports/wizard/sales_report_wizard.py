@@ -3,7 +3,7 @@ from odoo import models, fields
 
 class SalesReportWizard(models.TransientModel):
     _name = 'primetech.sales.report.wizard'
-    _description = 'Etat Journalier des Ventes'
+    _description = 'Etat Périodique des Ventes'
 
     date_from = fields.Date(
         string='Date début',

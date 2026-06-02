@@ -3,7 +3,7 @@ from odoo import models, fields
 
 class CashFlowReportWizard(models.TransientModel):
     _name = 'primetech.cash.flow.report.wizard'
-    _description = 'Etat Journalier de Tresorerie'
+    _description = 'Etat Périodique de Tresorerie'
 
     show_opening_balance = fields.Boolean(
     string="Calculer les soldes réels"

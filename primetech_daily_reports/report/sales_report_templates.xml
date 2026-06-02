@@ -16,7 +16,7 @@
                     <div class="page">
 
                         <div class="report-title">
-                            ETAT DES VENTES
+                            ETAT PERIODIQUE DES VENTES
                         </div>
 
                         <table style="width:100%;" class="report-period">
@@ -78,7 +78,7 @@
                                     t-as="line">
 
                                     <td>
-                                        <span t-esc="line['invoice']"/>
+                                        <span t-esc="line['order']"/>
                                     </td>
 
                                     <td>
@@ -134,23 +134,23 @@
                         <table class="summary-table">
 
                             <tr>
-                                <td class="summary-label">Nombre de factures</td>
+                                <td class="summary-label">Nombre de commandes</td>
                                 <td class="summary-value">
-                                    <span t-esc="invoice_count"/>
+                                    <span t-esc="order_count"/>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td class="summary-label">Nombre de clients</td>
                                 <td class="summary-value">
-                                    <span t-esc="customer_count"/>
+                                    <span t-esc="seller_count"/>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td class="summary-label">Nombre de vendeurs</td>
                                 <td class="summary-value">
-                                    <span t-esc="seller_count"/>
+                                    <span t-esc="customer_count"/>
                                 </td>
                             </tr>
 
@@ -170,103 +170,461 @@
 
                         </table>
 
-                        <div class="section-title">
-                            SYNTHÈSE PAR VENDEUR
+                        <div class="section-title"
+                            style="margin-top:20px;
+                                    margin-bottom:12px;
+                                    font-size:16px;
+                                    font-weight:bold;
+                                    text-align:center;
+                                    border-bottom:2px solid #000;
+                                    padding-bottom:5px;">
+
+                            SYNTHÈSE DES VENTES PAR VENDEUR ET PAR SEMAINE
+
+                            <br/>
+
+                            <span style="font-size:11px;font-weight:normal;">
+
+                                Période du
+                                <span t-esc="docs.date_from.strftime('%d/%m/%Y')"/>
+                                au
+                                <span t-esc="docs.date_to.strftime('%d/%m/%Y')"/>
+
+                            </span>
+
                         </div>
 
-                            <table class="summary-report">
+                        <!-- KPI -->
 
-                                <thead>
+                        <table style="
+                            width:100%;
+                            margin-bottom:15px;
+                            border:1px solid #ddd;
+                            ">
 
-                                    <tr>
+                            <tr>
 
-                                        <th>Vendeur</th>
-                                        <th>Quantité Vendue</th>
-                                        <th>CA HT</th>
-                                        <th>CA TTC</th>
+                                <td style="text-align:center;">
+                                    <strong>Chiffre d'Affaure</strong><br/>
+                                    <span t-esc="'{:,.0f}'.format(grand_total_ttc).replace(',', ' ')"/>
+                                    FCFA
+                                </td>
 
-                                    </tr>
+                                <td style="text-align:center;">
+                                    <strong>Commissions</strong><br/>
+                                    <span t-esc="'{:,.0f}'.format(total_commission).replace(',', ' ')"/>
+                                    FCFA
+                                </td>
 
-                                </thead>
+                                <td style="text-align:center;">
+                                    <strong>Commandes</strong><br/>
+                                    <span t-esc="order_count"/>
+                                </td>
 
-                                <tbody>
+                                <td style="text-align:center;">
+                                    <strong>Vendeurs</strong><br/>
+                                    <span t-esc="seller_count"/>
+                                </td>
 
-                                    <tr
-                                        t-foreach="seller_summary.items()"
-                                        t-as="seller">
+                            </tr>
 
-                                        <td>
-                                            <span t-esc="seller[0]"/>
-                                        </td>
+                        </table>
 
-                                        <td class="summary-qty">
-                                            <span t-esc="seller[1]['qty']"/>
-                                        </td>
+                        <!-- DISPOSITION PRINCIPALE -->
 
-                                        <td class="summary-money">
-                                            <span t-esc="'{:,.0f} FCFA'.format(
-                                                seller[1]['ca_ht']
-                                            ).replace(',', ' ')"/>
-                                        </td>
+                        <table style="
+                            width:100%;
+                            border-collapse:collapse;
+                            ">
 
-                                        <td class="summary-money">
-                                            <span t-esc="'{:,.0f} FCFA'.format(
-                                                seller[1]['ca_ttc']
-                                            ).replace(',', ' ')"/>
-                                        </td>
+                            <tr>
 
-                                    </tr>
+                                <!-- TABLEAU DETAIL -->
 
-                                </tbody>
+                                <td style="
+                                    width:72%;
+                                    vertical-align:top;
+                                    padding-right:10px;
+                                ">
 
-                            </table>
+                                    <table class="summary-report">
+
+                                        <thead>
+
+                                            <tr style="
+                                                background:#e9ecef;
+                                                font-weight:bold;
+                                                font-size:12px;
+                                                text-transform:uppercase;
+                                            ">
+
+                                                <th width="20%">Semaine</th>
+                                                <th width="35%">Vendeur</th>
+                                                <th width="20%" class="summary-money">
+                                                    Chiffre d'Affaires
+                                                </th>
+                                                <th width="10%">
+                                                    Eligible
+                                                </th>
+                                                <th width="15%" class="summary-money">
+                                                    Commission
+                                                </th>
+
+                                            </tr>
+
+                                        </thead>
+
+                                        <tbody>
+
+                                            <t t-set="period_ht" t-value="0"/>
+                                            <t t-set="period_commission" t-value="0"/>
+
+                                            <t t-foreach="weekly_customer_summary.items()"
+                                            t-as="week">
+
+                                                <t t-set="week_ht" t-value="0"/>
+                                                <t t-set="week_commission" t-value="0"/>
+
+                                                <tr style="
+                                                    background:#dbeafe;
+                                                    font-weight:bold;
+                                                    font-size:13px;
+                                                ">
+
+                                                    <td colspan="5">
+
+                                                        <span t-esc="week[0]"/>
+
+                                                    </td>
+
+                                                </tr>
+
+                                                <t t-foreach="week[1].items()"
+                                                t-as="customer">
+
+                                                    <tr>
+
+                                                        <td></td>
+
+                                                        <td style="padding-left:15px;">
+                                                            <span t-esc="customer[0]"/>
+                                                        </td>
+
+                                                        <td class="summary-money">
+
+                                                            <span t-esc="'{:,.0f}'.format(
+                                                                customer[1]['ca_ht']
+                                                            ).replace(',', ' ')"/>
+
+                                                            FCFA
+
+                                                        </td>
+
+                                                        <td style="
+                                                            text-align:center;
+                                                            font-weight:bold;
+                                                        ">
+
+                                                            <span t-if="customer[1]['commission'] > 0">
+                                                                ✓
+                                                            </span>
+
+                                                            <span t-if="customer[1]['commission'] == 0">
+                                                                -
+                                                            </span>
+
+                                                        </td>
+
+                                                        <td class="summary-money">
+
+                                                            <span t-esc="'{:,.0f}'.format(
+                                                                customer[1]['commission']
+                                                            ).replace(',', ' ')"/>
+
+                                                            FCFA
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                    <t t-set="week_ht"
+                                                    t-value="week_ht + customer[1]['ca_ht']"/>
+
+                                                    <t t-set="week_commission"
+                                                    t-value="week_commission + customer[1]['commission']"/>
+
+                                                </t>
+
+                                                <tr style="
+                                                    background:#f8fafc;
+                                                    font-weight:bold;
+                                                    border-top:2px solid #94a3b8;
+                                                ">
+
+                                                    <td></td>
+
+                                                    <td style="
+                                                        font-size:14px;
+                                                        color:#334155;
+                                                    ">
+                                                        TOTAL SEMAINE
+                                                    </td>
+
+                                                    <td class="summary-money">
+
+                                                        <span t-esc="'{:,.0f}'.format(
+                                                            week_ht
+                                                        ).replace(',', ' ')"/>
+
+                                                        FCFA
+
+                                                    </td>
+
+                                                    <td></td>
+
+                                                    <td class="summary-money"
+                                                        style="
+                                                            font-size:15px;
+                                                            font-weight:800;
+                                                        ">
+
+                                                        <span t-esc="'{:,.0f}'.format(
+                                                            week_commission
+                                                        ).replace(',', ' ')"/>
+
+                                                        FCFA
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </t>
+
+                                            <tr style="
+                                                background:#1f2937;
+                                                color:white;
+                                                font-weight:bold;
+                                            ">
+
+                                                <td colspan="2"
+                                                    style="font-size:16px;">
+
+                                                    VENTES TOTALES DE LA PÉRIODE
+
+                                                </td>
+
+                                                <td class="summary-money"
+                                                    style="
+                                                        font-size:18px;
+                                                        font-weight:900;
+                                                        color:white;
+                                                    ">
+
+                                                    <span t-esc="'{:,.0f}'.format(
+                                                        grand_total_ht
+                                                    ).replace(',', ' ')"/>
+
+                                                    FCFA
+
+                                                </td>
+
+                                                <td></td>
+
+                                                <td class="summary-money"
+                                                    style="
+                                                        font-size:22px;
+                                                        font-weight:900;
+                                                        color:#4ade80;
+                                                    ">
+
+                                                    <span t-esc="'{:,.0f}'.format(
+                                                        total_commission
+                                                    ).replace(',', ' ')"/>
+
+                                                    FCFA
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </td>
+
+                                <!-- COLONNE DE DROITE -->
+
+                                <td style="
+                                    width:28%;
+                                    vertical-align:top;
+                                ">
+
+                                    <!-- RECAP -->
+
+                                    <table class="summary-table"
+                                        style="
+                                                width:100%;
+                                                margin-bottom:10px;
+                                        ">
+
+                                        <tr>
+                                            <td colspan="2"
+                                                style="
+                                                    text-align:center;
+                                                    font-weight:bold;
+                                                    background:#e9ecef;
+                                                ">
+                                                RÉCAPITULATIF
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Vendeurs</td>
+                                            <td class="summary-money">
+                                                <span t-esc="customer_count"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Commandes</td>
+                                            <td class="summary-money">
+                                                <span t-esc="order_count"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>CA Total</td>
+                                            <td class="summary-money">
+                                                <span t-esc="'{:,.0f}'.format(grand_total_ht).replace(',', ' ')"/>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Commissions</td>
+                                            <td class="summary-money">
+                                                <strong>
+                                                    <span t-esc="'{:,.0f}'.format(total_commission).replace(',', ' ')"/>
+                                                </strong>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+
+                                    <!-- TOP VENDEURS -->
+
+                                    <table class="summary-table"
+                                        style="
+                                                width:100%;
+                                                margin-bottom:10px;
+                                        ">
+
+                                        <tr>
+                                            <td colspan="2"
+                                                style="
+                                                    text-align:center;
+                                                    font-weight:bold;
+                                                    background:#e9ecef;
+                                                ">
+                                                TOP 5 VENDEURS
+                                            </td>
+                                        </tr>
+
+                                        <tr t-foreach="top_sellers"
+                                            t-as="client">
+
+                                            <td>
+                                                <span t-esc="client[0]"/>
+                                            </td>
+
+                                            <td class="summary-money">
+                                                <span t-esc="'{:,.0f}'.format(client[1]['ca_ht']).replace(',', ' ')"/>
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
+
+                                    <!-- TOP COMMISSIONS -->
+
+                                    <table class="summary-table"
+                                        style="
+                                                width:100%;
+                                                margin-bottom:10px;
+                                        ">
+
+                                        <tr>
+                                            <td colspan="2"
+                                                style="
+                                                    text-align:center;
+                                                    font-weight:bold;
+                                                    background:#e9ecef;
+                                                ">
+                                                TOP COMMISSIONS
+                                            </td>
+                                        </tr>
+
+                                        <tr t-foreach="top_commissions"
+                                            t-as="client">
+
+                                            <td>
+                                                <span t-esc="client[0]"/>
+                                            </td>
+
+                                            <td class="summary-money">
+                                                <span t-esc="'{:,.0f}'.format(client[1]['commission']).replace(',', ' ')"/>
+                                            </td>
+
+                                        </tr>
+
+                                    </table>
 
 
-                        <div class="section-title">
-                            SYNTHÈSE PAR CLIENT
-                        </div>
+                                    <!-- A PAYER -->
 
-                            <table class="summary-report">
+                                    <table style="
+                                        width:100%;
+                                        border:2px solid #000;
+                                    ">
 
-                                <thead>
+                                        <tr>
 
-                                    <tr>
+                                            <td style="
+                                                text-align:center;
+                                                padding:15px;
+                                            ">
 
-                                        <th>Client</th>
-                                        <th>CA HT</th>
-                                        <th>CA TTC</th>
+                                                <div style="
+                                                    font-size:12px;
+                                                    font-weight:bold;
+                                                ">
+                                                    COMMISSIONS À PAYER
+                                                </div>
 
-                                    </tr>
+                                                <div style="
+                                                    font-size:26px;
+                                                    font-weight:900;
+                                                ">
 
-                                </thead>
+                                                    <span t-esc="'{:,.0f}'.format(
+                                                        total_commission
+                                                    ).replace(',', ' ')"/>
 
-                                <tbody>
+                                                    FCFA
 
-                                    <tr
-                                        t-foreach="customer_summary.items()"
-                                        t-as="customer">
+                                                </div>
 
-                                        <td>
-                                            <span t-esc="customer[0]"/>
-                                        </td>
+                                            </td>
 
-                                        <td class="summary-money">
-                                            <span t-esc="'{:,.0f} FCFA'.format(
-                                                customer[1]['ca_ht']
-                                            ).replace(',', ' ')"/>
-                                        </td>
+                                        </tr>
 
-                                        <td class="summary-money">
-                                            <span t-esc="'{:,.0f} FCFA'.format(
-                                                customer[1]['ca_ttc']
-                                            ).replace(',', ' ')"/>
-                                        </td>
+                                    </table>
 
-                                    </tr>
+                                </td>
 
-                                </tbody>
+                            </tr>
 
-                            </table>
+                        </table>
 
 
                         <div class="section-title">
