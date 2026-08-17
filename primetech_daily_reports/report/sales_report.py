@@ -198,13 +198,13 @@ class ReportSales(models.AbstractModel):
             seller_totals.items(),
             key=lambda x: x[1]['commission'],
             reverse=True
-        )[:5]
+        )[:20]
 
         top_sellers = sorted(
             seller_totals.items(),
             key=lambda x: x[1]['ca_ht'],
             reverse=True
-        )[:5]
+        )[:20]
 
         customer_count = len(
             set(
