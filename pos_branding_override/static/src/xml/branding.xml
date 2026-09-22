@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates xml:space="preserve">
-
-    <!-- Override complet du composant Branding -->
-    <t t-name="point_of_sale.Branding" owl="1">
-        <!-- Vide volontairement : supprime le logo Odoo -->
-    </t>
-
-</templates>
